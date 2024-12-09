@@ -1,0 +1,1618 @@
+/* Added for FEBACalendar jQuery plugin - START*/
+
+.febacal-container-div {}
+
+.febacal-view-header {}
+
+.febacal-view-header table tr:hover {
+    /* 	background-color:#FFFFFF !important; */
+    background-color: transparent !important;
+}
+
+.febacal-view-header table td {
+    border-bottom: medium none;
+}
+
+.febacal-header {
+    background: none repeat scroll 0 0 #775544;
+    border: 1px solid #CCCCCC;
+    color: #FFFFFF;
+    font-size: 0.9em;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle !important;
+}
+
+.febacal-cell {
+    border: 1px #CCCCCC solid;
+}
+
+.febacal-cell-hover-class {
+    background-color: #EAF4FD !important;
+}
+
+.febacal-container {
+    font-size: 1em;
+}
+
+.febacal-container table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%
+}
+
+.febacal-container table tr:hover {
+    /* 	background-color:#FFFFFF !important; */
+    background-color: transparent !important;
+}
+
+.febacal-container td,
+.febacal-container th {
+    padding: 0;
+    vertical-align: top;
+}
+
+.febacal-cell-date {
+    float: right;
+    padding: 0 2px;
+    font-size: 0.9em;
+    color: black;
+}
+
+.febacal-today {
+    background: none repeat scroll 0 0 #EEE6E0;
+    /* Optionally: #EDF6FB */
+}
+
+.febacal-monthDay {}
+
+.febacal-outside-month {
+    opacity: 0.3;
+    filter: Alpha(opacity=30);
+}
+
+.febacal-today .febacal-cell-date {
+    /*color: #FFFFFF;*/
+    color: #000000;
+}
+
+.febacal-header-left {
+    width: 25%;
+    text-align: left;
+}
+
+.febacal-header-center {
+    width: auto;
+    /*Added newly by vinay for reopened defects fix*/
+    text-align: center;
+    vertical-align: middle !important;
+    white-space: nowrap;
+}
+
+.febacal-header-center table tr:hover .febacal-header-center tr.odd.open:hover td,
+.febacal-header-center tr.even.open:hover td,
+.febacal-header-center table tr:hover td {
+    /* 	background-color:#FFFFFF !important; */
+    background-color: transparent !important;
+}
+
+.febacal-header-right {
+    width: 25%;
+    text-align: right;
+}
+
+.febacal-clear-div {
+    clear: both;
+    height: 10px;
+}
+
+/* Buttons and headers related - Start */
+
+.febacal-text-right .febacal-calendar-button-wrapper {
+    float: right;
+}
+
+.febacal-text-left .febacal-calendar-button-wrapper {
+    float: left;
+}
+
+.febacal-header-left .febacal-calendar-button-wrapper {
+    float: left;
+}
+
+.febacal-header-right .febacal-calendar-button-wrapper {
+    float: right;
+}
+
+.febacal-calendar-button {
+    background: url("../images/backgrounds/brownbuttonstyle02.gif") no-repeat scroll 100% 0 #026EAB;
+    border: 0 solid #333333;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: left;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    height: 21px;
+    line-height: 20px;
+    overflow: visible;
+    padding-right: 5px;
+    text-decoration: none;
+    vertical-align: middle;
+    width: auto;
+}
+
+.febacal-calendar-button-wrapper {
+    background: url("../images/backgrounds/brownbuttonstyle02.gif") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    height: 21px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 0.7%;
+    padding-left: 5px;
+}
+
+.febacal-calendar-button-disabled-wrapper {
+    background: url("../images/backgrounds/buttonStyle03.gif") no-repeat scroll 0 0 transparent;
+    height: 21px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 0.7%;
+    padding-left: 5px;
+}
+
+.febacal-calendar-button-disabled {
+    background: url("../images/backgrounds/buttonStyle03.gif") no-repeat scroll 100% 0 transparent;
+    color: #FFFFFF;
+    cursor: default;
+}
+
+.febacal-delete-space {
+    background: url("../images/febacalendar_trashcan.png") no-repeat scroll 50% 1px transparent;
+    border: 1px solid #AAAAAA;
+    display: inline-block;
+    padding: 3px 5px;
+    text-align: center;
+    width: 50%;
+}
+
+.febacal-margin-left {
+    margin-left: 5px;
+}
+
+.febacal-margin-right {
+    margin-right: 5px;
+}
+
+.febacal-text-right {
+    text-align: right;
+}
+
+.febacal-text-left {
+    text-align: left;
+}
+
+/* Buttons and headers related - End */
+
+.febacal-day-content {
+    position: relative;
+    clear: both;
+    font-size: 0.8em;
+}
+
+.febacal-day-content-reference {}
+
+.febacal-show-more-events,
+.febacal-close-more-events {
+    padding: 1px 5px;
+    color: #449CCC;
+    margin: 1px 2px;
+    font-size: 0.9em;
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    bottom: 0;
+    display: none;
+}
+
+.febacal-select-disabled {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.febacal-dialog-div {
+    background-color: #E8E8E8;
+    /* following was added for simple modal. */
+    /*padding: 10px;
+	height: auto;
+	min-width: 300px;
+	display: none;*/
+}
+
+.febacal-indicate-progress {
+    cursor: progress !important;
+}
+
+/* Event Styles -- Start */
+
+.febacal-event {
+    padding: 0px 2px;
+    color: white;
+    margin: 1px 2px;
+    border-width: 1px 1px;
+    border-style: solid;
+    font-size: 0.9em;
+    cursor: pointer;
+    position: absolute;
+    overflow: hidden;
+    z-index: 2;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.febacal-event-text {}
+
+.febacal-event-one {
+    background-color: #1158DB;
+    /*blue*/
+    border-color: #003380;
+}
+
+.febacal-event-two {
+    background-color: #009933;
+    /*green*/
+    border-color: #005C1F;
+}
+
+.febacal-event-three {
+    background-color: #990000;
+    /*red*/
+    border-color: #4C0000;
+}
+
+.febacal-event-four {
+    background-color: #336600;
+    /*dark green*/
+    border-color: #1A3300;
+}
+
+.febacal-event-five {
+    background-color: #CC0066;
+    /*dark pink*/
+    border-color: #660033;
+}
+
+.febacal-event-six {
+    background-color: #663300;
+    /*brown*/
+    border-color: #331A00;
+}
+
+.febacal-event-seven {
+    background-color: #33CCFF;
+    /*light blue*/
+    border-color: #1A6680;
+}
+
+.febacal-event-eight {
+    background-color: #6600CC;
+    /*violet*/
+    border-color: #330066;
+}
+
+.febacal-event-nine {
+    background-color: #666633;
+    /*Dark Olive Green*/
+    border-color: #33331A;
+}
+
+.febacal-event-ten {
+    background-color: gray;
+    /*grey*/
+    border-color: #000000;
+}
+
+/* Event Styles -- End */
+
+/* Month view styles -- Start */
+
+.febacal-container-month {
+    /* Preferred Width is x*columns+columns */
+    /* width: 847px; */
+    width: 700px;
+    margin: 0 auto;
+}
+
+/* Month view styles -- End */
+
+/* Month widget view styles -- Start */
+
+.febacal-container-month-widget {
+    /* Preferred Width is x*columns+columns */
+    /* 	width: 308px; */
+    /* 	width: 500px; */
+    width: 287px;
+    margin: 5px auto 0;
+}
+
+.febacal-container-month-widget #febacal-ResetView {
+    float: left;
+}
+
+.febacal-day-content-has-event {
+    background-color: #009933;
+    /*green*/
+}
+
+.febacal-day-content-has-event a {
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.febacal-day-content-has-event a:link,
+.febacal-day-content-has-event a:visited,
+.febacal-day-content-has-event a:hover,
+.febacal-day-content-has-event a:active {
+    color: #000000;
+    text-decoration: none;
+}
+
+/* Month widget view styles -- End */
+
+/* Year view styles -- Start */
+
+.febacal-container-year {
+    /* Preferred Width is (x*cols+left-padding+right-padding+cols+1)*colums x=40 */
+    /* width: 873px; */
+    width: 700px;
+    margin: 0 auto;
+}
+
+/* Year view styles -- End */
+
+.febacal-container-year-widget {
+    /*width: 33%;*/
+    border: 0 none;
+    padding: 5px 5px 0 !important;
+}
+
+/* Added for FEBACalendar jQuery plugin - END*/
+
+/* Added for FEBATabs jQuery plugin - START*/
+
+.febatab-parent-div {
+    background-color: #F5F7FA;
+    border-radius: 4px;
+    display: block;
+    font-family: Arial, Verdana, sans-serif;
+    font-size: 1em;
+    padding: 5px;
+}
+
+.febatab-ul {
+    background-color: #D1E3FA;
+    display: block;
+    padding: 5px 5px 0 5px;
+    overflow: hidden;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.febatab-normal-tab {
+    border: 1px solid #205AA2;
+    float: left;
+    list-style: none outside none;
+    margin: 0 2px;
+    white-space: nowrap;
+    position: relative;
+    font-weight: bold;
+    background: none repeat scroll 0 0 transparent;
+    padding: 0px;
+}
+
+.febatab-inactive-tab {
+    background-color: #0278BA;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.febatab-inactive-tab a,
+.febatab-inactive-tab a:hover,
+.febatab-inactive-tab a:link,
+.febatab-inactive-tab a:visited {
+    color: #FFFFFF;
+    cursor: pointer;
+    float: left;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.febatab-active-tab {
+    background-color: #F5F7FA;
+    border-bottom: 1px solid #F5F7FA;
+    color: #5DACD9;
+}
+
+.febatab-active-tab a,
+.febatab-active-tab a:hover,
+.febatab-active-tab a:link,
+.febatab-active-tab a:visited {
+    color: #5DACD9;
+    cursor: default;
+    float: left;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.febatab-active-content {
+    display: block;
+}
+
+.febatab-inactive-content {
+    display: none;
+}
+
+.febatab-content {
+    padding: 1em 0 0 0;
+}
+
+.febatab-rounded-top {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.febatab-rounded-all {
+    border-radius: 4px;
+}
+
+/* Added for FEBATabs jQuery plugin - END*/
+
+/* Added for FEBATooltip jQuery plugin - START*/
+
+.febatooltip-content {
+    color: #000000;
+    /*next-gen*/
+    border: 0 none;
+}
+
+.febatooltip-wrapper {
+    position: absolute;
+    background-color: #e9f7ff;
+    /*next-gen*/
+    z-index: 2005;
+    display: none;
+    padding: 5px;
+    margin: 1px;
+    /* border: 1px solid #FFFFFF;*/
+    font-size: 0.9em;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+/* Added for FEBATooltip jQuery plugin - END*/
+
+/* Added for FEBAColurPicker jQuery plugin - START*/
+
+.fcp-wrapper {
+    position: relative;
+    display: inline-block;
+    *display: inline !important;
+}
+
+.fcp-colourpalette {
+    background-color: #000000;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    z-index: 2000;
+    position: absolute;
+    padding: 2px;
+    display: none;
+    top: 0;
+    left: 0;
+}
+
+.fcp-color {
+    width: 20px;
+    height: 20px;
+    margin: 2px;
+    border: 2px solid #000000;
+    float: left;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.fcp-picker {
+    background-image: url("../images/pfm_colorpalette_bg.png");
+    cursor: pointer;
+    display: block;
+    height: 31px;
+    width: 43px;
+    *display: inline-block !important;
+}
+
+.fcp-indicator {
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    float: left;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.fcp-color:hover {
+    border: 2px solid #FFFFFF;
+}
+
+.fcp-colourpalette table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.fcp-colourpalette:hover,
+.fcp-colourpalette table:hover,
+.fcp-colourpalette table tr:hover {
+    background-color: #000000;
+}
+
+.fcp-colourpalette table tr td {
+    border: medium none;
+}
+
+.fcp-picker-disabled {
+    background-image: url("") !important;
+    cursor: default;
+}
+
+.fcp-indicator-disabled {}
+
+/*FEBA specific style handling for fcp*/
+
+.HW_tabletextwithpadding .fcp-wrapper {
+    float: left;
+    margin-top: 7px;
+}
+
+.querytextright .fcp-wrapper {
+    margin-left: 5px;
+}
+
+/*Surej RWD Added for color picker top spacing in manage categories*/
+
+.fcp-wrapper .fcp-picker {
+    margin-top: 2px;
+}
+
+/* Added for FEBAColurPicker jQuery plugin - END*/
+
+/* Added for FEBACombobox jQuery plugin - START*/
+
+.ui-combobox {
+    position: relative;
+    display: inline-block;
+    /*Space required by the button: margin should be equal to: buttonWidth+2 buttonBorders+ right-TextboxBoder+3px*/
+    margin-right: 22px;
+}
+
+.ui-combobox-toggle {
+    position: absolute !important;
+    top: 0;
+    bottom: 0;
+    margin-left: -1px;
+    padding: 0;
+    *height: 1.25em;
+    *top: 0.1em;
+    *vertical-align: middle;
+}
+
+.ui-combobox-input {
+    display: inline-block;
+    padding-left: 2px;
+    /*color: #000000;*/
+    /*changes made for combo-box vinay*/
+    *vertical-align: middle;
+}
+
+.ui-autocomplete {
+    max-height: 250px;
+    overflow-y: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.69em;
+    color: #000000;
+    *overflow-y: scroll;
+    *overflow-x: hidden;
+    *padding-right: 20px;
+    z-index: 2002 !important;
+    /*next-gen*/
+}
+
+.ui-autocomplete li a.ui-corner-all {
+    color: #000000;
+}
+
+.ui-combobox a.ui-button-icon-only {
+    width: 16px;
+}
+
+.ui-combobox .ui-combobox-input.ui-widget-content,
+.ui-combobox .ui-combobox-input.ui-state-hover {
+    /* 	background: url("../images/backgrounds/combobox.gif") no-repeat scroll 0 0 #FFFFFF; next-gen*/
+}
+
+.ui-combobox .ui-button,
+.ui-combobox .ui-button.ui-state-hover {
+    /* 	background: url("../images/backgrounds/combobox.gif") no-repeat scroll 0 0 #FFFFFF; next-gen*/
+}
+
+.ui-autocomplete .ui-menu-item.ui-combobox-list {}
+
+.ui-combobox-selected-data {
+    margin: 2px 0 0;
+    padding: 3%;
+    position: absolute;
+    width: 25px;
+}
+
+.ui-combobox-colour {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px 0 0;
+    float: left;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.ui-combobox-image {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px 0 0;
+    float: left;
+    background: url("") no-repeat scroll center center transparent;
+}
+
+/* Added by shreya_sontakke for ebux-3 combo in header--- Start*/
+
+#header .ui-combobox .ui-combobox-input.ui-widget-content,
+#header .ui-combobox .ui-combobox-input.ui-state-hover {
+    background: url("") no-repeat scroll 0 0 #000000;
+}
+
+#header .ui-combobox .ui-button,
+#header .ui-combobox .ui-button.ui-state-hover {
+    background: url("") no-repeat scroll 0 0 #000000;
+}
+
+/* Added by shreya_sontakke for ebux-3 combo in header--- End*/
+
+/* Added for FEBACombobox jQuery plugin - END*/
+
+.febacal-day-content-has-event-ux3 {
+    background-color: #FFFFFF;
+    /*green*/
+    cursor: pointer;
+}
+
+.febacal-day-content-has-event-ux3 a {
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.febacal-day-content-has-event-ux3 a:link,
+.febacal-day-content-has-event-ux3 a:visited,
+.febacal-day-content-has-event-ux3 a:hover,
+.febacal-day-content-has-event-ux3 a:active {
+    color: #000000;
+    text-decoration: none;
+}
+
+.febacal-container-month-widget-ux3 #febacal-ResetView {
+    float: left;
+}
+
+.febacal-container-month-widget-ux3 {
+    /* Preferred Width is x*columns+columns */
+    /* 	width: 308px; */
+    /* 	width: 500px; */
+    width: 287px;
+    margin-left: 5px;
+    /*10px; */
+    /*Fix for calendar widget distortion at lower resoln*/
+    margin-top: 25px;
+    max-width: 287px;
+}
+
+.febacal-calendar-resetbutton-disabled {
+    color: #022E64;
+    cursor: default;
+    font-weight: normal;
+    font-size: 1.20em;
+    margin-bottom: 1px;
+}
+
+.febacal-calendar-resetbutton-disabled-wrapper {
+    height: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 0.7%;
+    padding-left: 5px;
+}
+
+.febacal-calendar-resetbutton-wrapper {
+    font-weight: bold;
+    cursor: pointer;
+    height: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 0.7%;
+    padding-left: 5px;
+    color: #1E84BE;
+}
+
+.feba-cal-colheader-wrapper {
+    border-top: 1px solid #aaaaaa;
+    border-left: 1px solid #aaaaaa;
+    border-right: 1px solid #aaaaaa;
+}
+
+.widget-content .febacal-calendar-button-wrapper-ux3 {
+    cursor: pointer;
+    max-height: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    /*margin-top: 0.7%;*/
+    padding-left: 5px;
+}
+
+.febacal-calendar-button-wrapper-ux3 {
+    background: url("../images/backgrounds/brownbuttonstyle02.gif") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    height: 15px;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    /*margin-top: 0.7%;*/
+    padding-left: 0px !important;
+}
+
+.widget-content .febacal-calendar-button-ux3 {
+    border: 0 solid #333333;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: left;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    height: 15px;
+    line-height: 20px;
+    overflow: visible;
+    padding-right: 4px;
+    margin-left: -3px;
+    /*Added newly by vinay for reopened defects fix*/
+    text-decoration: none;
+    vertical-align: middle;
+    width: 11px;
+}
+
+.febacal-calendar-button-ux3 {
+    background: url("../images/backgrounds/brownbuttonstyle02.gif") no-repeat scroll 100% 0 #026EAB;
+    border: 0 solid #333333;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: left;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    height: 5px;
+    line-height: 20px;
+    overflow: visible;
+    padding-right: 5px;
+    text-decoration: none;
+    vertical-align: middle;
+    width: auto;
+}
+
+.febacal-headerRow-ux3 {
+    max-height: 15px;
+    max-width: 287px;
+}
+
+.febacal-cell-ux3 {
+    border: 1px #E0E0E0 ridge;
+    cursor: pointer;
+}
+
+.febacal-today-ux3 {
+    background: none repeat scroll 0 0 #FAF9C9;
+    /* Optionally: #EDF6FB */
+}
+
+.febacal-header-left-ux3 {
+    width: 25%;
+    text-align: left;
+    border-right: 1px solid #1D82BE;
+}
+
+.febacal-header-right-ux3 {
+    width: 25%;
+    text-align: left;
+    border-left: 1px solid #aaaaaa;
+}
+
+.febacal-header-ux3 {
+    background: none repeat scroll 0 0 #E0AD0F;
+    border: 1px ridge #AAAAAA;
+    color: #022E64;
+    font-size: 0.68em;
+    text-align: center;
+    vertical-align: middle !important;
+    font-weight: normal;
+    height: 25px !important;
+}
+
+.calendarEventDesc {
+    float: left;
+    list-style: none outside none;
+    padding: 0 !important;
+    width: 45%;
+    /*next-gen*/
+    /* border-top:1px solid #E0AD0F;*/
+    margin-left: 15px;
+    margin-top: 5px;
+    position: relative;
+    bottom: 18px;
+}
+
+.calendarPagination {
+    float: right;
+    list-style: none outside none;
+    margin-top: 20px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.goto_next {
+    background: url("../images/db_pagi_right_active.png") no-repeat scroll 8px 2px transparent !important;
+    display: block;
+    width: 20px;
+}
+
+.goto_previous {
+    background: url("../images/db_pagi_left_active.png") no-repeat scroll 2px 2px transparent !important;
+    display: block;
+    width: 20px;
+}
+
+.goto_next_inactive {
+    background: url("../images/db_pagi_left.png") no-repeat scroll 2px 2px transparent !important;
+    display: block;
+    width: 20px;
+}
+
+.goto_previous_inactive {
+    background: url("../images/db_pagi_right.png") no-repeat scroll 8px 2px transparent !important;
+    display: block;
+    width: 20px;
+}
+
+.widget-content .calendarPagination li {
+    float: left;
+    padding-left: 9px;
+    padding-top: 4px;
+}
+
+.widget-content .calendarEventDesc ul {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.widget-content .calendarPagination {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.calendarPaginationWrapper {
+    width: 100%;
+    border-top: 1px solid #C9CBCC;
+    float: left;
+    height: 26px;
+}
+
+.calEventCountRed {
+    background-color: #F7320B;
+    color: #FFFFFF;
+    font-family: arial;
+    font-size: 0.7em;
+    /*next-gen*/
+    /*     min-height: 50%; */
+    text-align: center;
+    text-decoration: none;
+    min-width: 30%;
+    /*next-gen*/
+    max-width: 30%;
+    /*next-gen*/
+    padding-top: 0px;
+    /*next-gen*/
+    margin-bottom: 4px;
+    /*next-gen*/
+}
+
+.calEventCountPurple {
+    /* background-color: #AB29E1;*/
+    /*By Parvathy*/
+    background-color: #E0AD0F;
+    /*By Parvathy*/
+    color: #FFFFFF;
+    font-family: arial;
+    font-size: 13px;
+    min-height: 50%;
+    text-align: center;
+    text-decoration: none;
+    min-width: 50%;
+    max-width: 50%;
+    padding-top: 2px;
+}
+
+.eventDetailsLeft {
+    margin-left: 5px;
+    overflow: hidden;
+    font-size: 0.9em;
+}
+
+.eventDetailsRight {
+    font-size: 0.9em;
+    float: right;
+}
+
+.eventDescLiWrappr {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.eventDescLiWrappr a {
+    color: #1E84BE;
+    text-decoration: none;
+}
+
+.eventHeading {
+    /*display: inline;*/
+    /*
+    float:left;
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 52%;*/
+    bottom: 15px;
+    float: left;
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-left: 10px;
+    position: relative;
+    width: 45%;
+    /*next-gen*/
+    border-bottom: 1px solid #E0AD0F;
+}
+
+.eventLable {}
+
+.gotowrapper {
+    float: left;
+    margin-top: 0px;
+}
+
+.jumpto {
+    font-family: arial;
+    font-size: 0.6em;
+    color: #333333;
+    text-decoration: none;
+    width: 20px;
+    margin: 2px 0px 0px 0px;
+    float: left;
+    height: 16px;
+    text-align: center;
+}
+
+.jumpToPage {
+    background: url("../images/small-button.png") no-repeat scroll 50% 50% transparent;
+    border: 0 solid #333333;
+    color: #FFFFFF;
+    font-family: Helvetica;
+    font-size: 0.7em;
+    font-weight: bold;
+    height: 17px;
+    margin: 2px 0px 0px 0px;
+    padding: 1px;
+    padding-bottom: 1px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    width: 24px;
+    float: left;
+    cursor: pointer;
+}
+
+.navigateTousecasebkp {
+    background: url("../images/db_icons_big_calendar.png") no-repeat scroll 0 0 transparent !important;
+    /* display: inline;*/
+    margin-left: 145px;
+    min-height: 33px;
+    min-width: 18px;
+    vertical-align: top;
+    padding: 5px;
+}
+
+.navigateTousecase {
+    padding: 0 5px 5px;
+    vertical-align: top;
+    float: right;
+    background: url("../images/db_icons_big_calendar.png") no-repeat scroll 1px -1px transparent !important;
+}
+
+.feba-cal-headerwrapper {
+    border-bottom: medium none;
+    border-left: 1px solid #aaaaaa !important;
+    border-right: 1px solid #aaaaaa !important;
+    border-top: 1px solid #aaaaaa !important;
+    /*  border-left: 1px solid #1D82BE !important;
+    border-right: 1px solid #1D82BE !important;
+    border-top: 1px solid #1D82BE !important;*/
+}
+
+.feba-cal-monthwidget-prevmonthbutton {
+    background: url("../images/db_pagi_left_active.png") no-repeat scroll 2px 1px transparent !important;
+}
+
+.feba-cal-monthwidget-prevmonthwrapper {
+    background: none !important;
+    padding-left: 0px !important;
+    /*border-right: 1px solid #1D82BE;*/
+    /* margin: 0 !important;
+    padding-right: 3px !important;
+    padding-left: 3px !important;
+    padding-bottom: 5px !important;*/
+}
+
+.feba-cal-monthwidgetnextmonthwrapper {
+    background: none !important;
+    /* padding-right: 3px !important;*/
+    /*
+    margin: 0 !important;
+    padding-left: 3px !important;
+    padding-right: 3px !important;
+    padding-bottom: 5px !important;*/
+}
+
+.feba-cal-monthwidget-nextmonthbutton {
+    background: url("../images/db_pagi_right_active.png") no-repeat scroll 5px 1px transparent !important;
+}
+
+.jumpYear {
+    border: 1px solid white;
+    background: url("../images/db_pagi_right_active.png") no-repeat scroll -1px 5px transparent !important;
+}
+
+.febacal-jumpyear-header-center .ui-state-default {
+    border: 1px solid #FFFFFF;
+}
+
+.febacal-jumpyear-header-center {
+    border-left: 1px solid #aaaaaa;
+    font-size: 1.3em;
+    max-width: 81px;
+    /*Added newly by vinay for reopened defects fix*/
+}
+
+.febacal-jumpmonth-header-center {
+    border-left: 1px solid #aaaaaa;
+    font-size: 1.3em;
+    width: 100px;
+}
+
+.febacal-jumpmonth-header-center .ui-state-default {
+    border: 1px solid #FFFFFF;
+}
+
+.febacal-container-div .feba-cal-container-table-wrapper {
+    /*width:280x !important;*/
+    border: 1px solid #aaaaaa;
+    /*For Calendar Change*/
+}
+
+.yeardropdownwrapperspan {
+    width: 70px;
+}
+
+.monthropdownwrapperspan {
+    width: 73px;
+}
+
+.monthdropdownouterwrapperspan {
+    width: 102px;
+}
+
+.yeardropdownouterwrapperspan {
+    width: 70px;
+    /*80px;Aashish modified for nextgen*/
+}
+
+.noEventsWrapper {
+    width: 100%;
+    background: url("../images/db_icons_info_bar_hint.png") no-repeat scroll -1px -1px transparent !important;
+    padding-left: 20px;
+    font-size: 0.9em;
+}
+
+.feba-cal-event-vertical-separater {
+    float: left;
+    position: relative;
+    /*width:48%;next-gen*/
+}
+
+.noEventsLi {}
+
+.calEventCountWhite {
+    height: 50%;
+    min-width: 100%;
+}
+
+.currentPageText {
+    color: #333333;
+    font-family: arial;
+    font-size: 0.69em;
+    text-align: center;
+    padding-left: 7px;
+    padding-right: 8px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    vertical-align: middle;
+    float: left;
+    margin-top: 4px;
+}
+
+/*Theme Specific class*/
+
+/*DESERT start*/
+
+.feba-cal-headerwrapperdesert {
+    border-bottom: medium none;
+    border-left: 1px solid #C85C33 !important;
+    border-right: 1px solid #C85C33 !important;
+    border-top: 1px solid #C85C33 !important;
+}
+
+.febacal-jumpyear-header-centerdesert {
+    border-left: 1px solid #E0E0E0;
+    width: 100px;
+    font-size: 1em;
+}
+
+.febacal-jumpmonth-header-centerdesert {
+    border-left: 1px solid #E0E0E0;
+    width: 100px;
+    font-size: 1em;
+}
+
+.febacal-header-left-ux3 {
+    width: 25%;
+    text-align: left;
+    border-right: 1px solid #EEE6E0;
+}
+
+.febacal-header-right-ux3desert {
+    width: 25%;
+    text-align: right;
+    border-left: 1px solid #EEE6E0;
+}
+
+.feba-cal-monthwidget-prevmonthbuttondesert {
+    background: url("../images/db_pagi_left_active.png") no-repeat scroll 2px 1px transparent !important;
+}
+
+.feba-cal-monthwidget-nextmonthbuttondesert {
+    background: url("../images/db_pagi_right_active.png") no-repeat scroll 5px 1px transparent !important;
+}
+
+.feba-cal-colheader-wrapperdesert {
+    border-top: 1px solid #C85C33;
+    border-left: 1px solid #C85C33;
+    border-right: 1px solid #C85C33;
+}
+
+.febacal-header-ux3desert {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px ridge #C85C33;
+    color: #C4C4C4;
+    font-size: 0.8em;
+    text-align: center;
+    vertical-align: middle !important;
+}
+
+.febacal-cell-ux3desert {
+    border: 1px #E0E0E0 ridge;
+    cursor: pointer;
+}
+
+.febacal-today-ux3desert {
+    background: none repeat scroll 0 0 #FAF9C9;
+    /* Optionally: #EDF6FB */
+}
+
+.febacal-selected-ux3desert {
+    background: none repeat scroll 0 0 #FAF9C9;
+    /* Optionally: #EDF6FB */
+}
+
+.calEventCountReddesert {
+    background-color: #C85C33;
+    color: #FFFFFF;
+    font-family: arial;
+    font-size: 0.7em;
+    /*next-gen*/
+    /*     min-height: 50%; */
+    text-align: center;
+    text-decoration: none;
+    min-width: 30%;
+    /*next-gen*/
+    max-width: 30%;
+    /*next-gen*/
+    padding-top: 0px;
+    /*next-gen*/
+    margin-bottom: 4px;
+    /*next-gen*/
+}
+
+.calEventCountWhitedesert {
+    height: 50%;
+    min-width: 100%;
+}
+
+.eventLabledesert {}
+
+.navigateTousecasedesert {
+    padding: 0 5px 5px;
+    vertical-align: top;
+    float: right;
+    background: url("../images/db_icons_big_calendar.png") no-repeat scroll 1px -1px transparent !important;
+}
+
+.eventDescLiWrapprdesert {
+    width: 100%;
+    margin-top: 25px;
+}
+
+.eventDescLiWrapprdesert a {
+    color: #C85C33;
+    text-decoration: none;
+}
+
+.jumpToPagedesert {
+    background-color: #775544;
+    color: #FFFFFF;
+    float: left;
+    font-size: 15px;
+    font-weight: bold;
+    height: 17px;
+    cursor: pointer;
+    vertical-align: top;
+    width: 25px;
+}
+
+.goto_next_inactivedesert {
+    background: url("../images/db_pagi_left.png") no-repeat scroll 0 2px transparent !important;
+    display: block;
+    width: 20px;
+}
+
+.goto_previous_inactivedesert {
+    background: url("../images/db_pagi_right.png") no-repeat scroll 0 2px transparent !important;
+    display: block;
+    width: 20px;
+}
+
+.goto_nextdesert {
+    background: url("../images/db_pagi_right_active.png") no-repeat scroll 0 2px transparent !important;
+    display: block;
+    width: 20px;
+}
+
+.goto_previousdesert {
+    background: url("../images/db_pagi_left_active.png") no-repeat scroll 0 2px transparent !important;
+    display: block;
+    width: 20px;
+}
+
+.febacal-container-div .feba-cal-container-table-wrapperdesert {
+    /*width:280x !important;*/
+    border: 1px solid #C85C33;
+}
+
+/*DESERT End*/
+
+/*OLIVE start*/
+
+.feba-cal-headerwrapperolive {
+    border-bottom: medium none;
+    border-left: 1px solid #313B34 !important;
+    border-right: 1px solid #313B34 !important;
+    border-top: 1px solid #313B34 !important;
+}
+
+.febacal-jumpyear-header-centerolive {
+    border-left: 1px solid #313B34;
+    width: 100px;
+    font-size: 1em;
+}
+
+.febacal-jumpmonth-header-centerolive {
+    border-left: 1px solid #313B34;
+    width: 100px;
+    font-size: 1em;
+}
+
+.febacal-header-left-ux3 {
+    width: 25%;
+    text-align: left;
+    border-right: 1px solid #1D82BE;
+}
+
+.febacal-header-right-ux3olive {
+    width: 25%;
+    text-align: right;
+    border-left: 1px solid #313B34;
+}
+
+.feba-cal-monthwidget-prevmonthbuttonolive {
+    background: url("../images/db_pagi_left_active.png") no-repeat scroll 2px 1px transparent !important;
+}
+
+.feba-cal-monthwidget-nextmonthbuttonolive {
+    background: url("../images/db_pagi_right_active.png") no-repeat scroll 5px 1px transparent !important;
+}
+
+.feba-cal-colheader-wrapperolive {
+    border-top: 1px solid #313B34;
+    border-left: 1px solid #313B34;
+    border-right: 1px solid #313B34;
+}
+
+.febacal-header-ux3olive {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px ridge #313B34;
+    color: #C4C4C4;
+    font-size: 0.8em;
+    text-align: center;
+    vertical-align: middle !important;
+}
+
+.febacal-cell-ux3olive {
+    border: 1px #E0E0E0 ridge;
+    cursor: pointer;
+}
+
+.febacal-today-ux3olive {
+    background: none repeat scroll 0 0 #E7F0B7;
+    /* Optionally: #EDF6FB */
+}
+
+.febacal-selected-ux3olive {
+    background: none repeat scroll 0 0 #E7F0B7;
+    /* Optionally: #EDF6FB */
+}
+
+.calEventCountRedolive {
+    background-color: #C7DD5F;
+    color: #FFFFFF;
+    font-family: arial;
+    font-size: 0.7em;
+    /*next-gen*/
+    /*     min-height: 50%; */
+    text-align: center;
+    text-decoration: none;
+    min-width: 30%;
+    /*next-gen*/
+    max-width: 30%;
+    /*next-gen*/
+    padding-top: 0px;
+    /*next-gen*/
+    margin-bottom: 4px;
+    /*next-gen*/
+}
+
+.calEventCountWhiteolive {
+    height: 50%;
+    min-width: 100%;
+}
+
+.eventLableolive {}
+
+.navigateTousecaseolive {
+    padding: 0 5px 5px;
+    vertical-align: top;
+    float: right;
+    background: url("../images/db_icons_big_calendar.png") no-repeat scroll 1px -1px transparent !important;
+}
+
+.eventDescLiWrapprolive {
+    width: 100%;
+    margin-top: 25px;
+}
+
+.eventDescLiWrapprolive a {
+    color: #C7DD5F;
+    text-decoration: none;
+}
+
+.jumpToPageolive {
+    background-color: #C7DD5F;
+    color: #FFFFFF;
+    float: left;
+    font-size: 15px;
+    font-weight: bold;
+    height: 17px;
+    cursor: pointer;
+    vertical-align: top;
+    width: 25px;
+}
+
+.goto_next_inactiveolive {
+    background: url("../images/db_pagi_left.png") no-repeat scroll 0 2px transparent !important;
+    display: block;
+    width: 20px;
+}
+
+.goto_previous_inactiveolive {
+    background: url("../images/db_pagi_right.png") no-repeat scroll 0 2px transparent !important;
+    display: block;
+    width: 20px;
+}
+
+.goto_nextolive {
+    background: url("../images/db_pagi_right_active.png") no-repeat scroll 0 2px transparent !important;
+    display: block;
+    width: 20px;
+}
+
+.goto_previousolive {
+    background: url("../images/db_pagi_left_active.png") no-repeat scroll 0 2px transparent !important;
+    display: block;
+    width: 20px;
+}
+
+.febacal-container-div .feba-cal-container-table-wrapperolive {
+    /*width:280x !important;*/
+    border: 1px solid #313B34;
+}
+
+/*OLIVE End*/
+
+/*Theme Specific Class*/
+
+.febacal-container-month-widget-ux3 td,
+.febacal-container-month-widget-ux3 th {
+    vertical-align: middle !important;
+}
+
+.febacal-header-right-ux3 .febacal-margin-right {
+    margin-right: 0px !important;
+}
+
+.febacal-header-left-ux3 .febacal-margin-left {
+    margin-left: 0px !important;
+}
+
+.febacal-selected-ux3 {
+    background: none repeat scroll 0 0 #EEFCFF;
+}
+
+.febacal-calendar-resetbutton-clearright {
+    display: block;
+    height: 4px;
+}
+
+.widget-content .calendarPagination li a:hover {
+    text-decoration: none;
+}
+
+.eventDescMinHeight {
+    min-height: 216.5px;
+}
+
+.febacal-container-month-widget-ux3 .febacal-view-header {
+    max-width: 287px;
+}
+
+@media screen and (min-width: 0px) and (max-width:639px) {
+    /*next-gen*/
+    .widget-content .febacal-calendar-button-ux3 {
+        margin-left: 0px;
+    }
+    .feba-cal-event-vertical-separater {
+        width: 0;
+    }
+    .febacal-calendar-resetbutton-wrapper {
+        margin-left: -3px;
+        margin-right: -3px;
+    }
+    #header .febacal-view-header .ui-combobox .ui-combobox-input.ui-widget-content,
+    #header .febacal-view-header .ui-combobox .ui-combobox-input.ui-state-hover {
+        width: 40px !important;
+    }
+    .febacal-jumpyear-header-center {
+        width: 65px;
+    }
+    .febacal-container-month-widget-ux3 {
+        max-width: 275px;
+        width: 275px;
+    }
+    .febacal-container table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 96%;
+        /*modified for 11.2.2*/
+    }
+    .eventDetailsLeft {
+        float: left;
+    }
+    .eventDetailsRight {
+        margin-left: 5px;
+        float: left;
+    }
+    .eventLable,
+    .eventLabledesert,
+    .eventLableolive {
+        display: inline-block;
+        /*width: 70%;*/
+        width: 81%;
+        word-wrap: break-word;
+    }
+    .eventHeading {
+        float: left;
+        /*  width: 26%;*/
+        /*Fix for calendar widget distortion at lower resoln*/
+        width: 44%;
+        margin-top: 8%;
+    }
+    .calendarEventDesc {
+        float: left;
+        /* width: 26%;*/
+        /*Fix for calendar widget distortion at lower resoln*/
+        width: 41%;
+    }
+}
+
+/*11012 Merging*/
+
+.febacal-header-left-monthviewux3 {
+    width: 60%;
+    text-align: left;
+    border-right: 1px solid #1D82BE;
+}
+
+.febacal-today-ux3blue {
+    background: none repeat scroll 0 0 #D2DEEF;
+    /* Optionally: #EDF6FB */
+}
+
+.febacal-monthDay-ux3blue {
+    border: 1px white ridge;
+    background-color: #F2F2F2;
+}
+
+.febacal-outside-month-ux3blue {
+    background-color: #F2F2F2;
+    border: 1px white ridge;
+    opacity: 0.3;
+    filter: Alpha(opacity=30);
+}
